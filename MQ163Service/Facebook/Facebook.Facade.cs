@@ -23,11 +23,11 @@ namespace MQ163.Application.Facade
         /// Activates the FaceBook Page with new Access Token
         /// </summary>
         /// <param name="accessToken">New Access Token</param>
-        private FacebookFacade Activate(string accessToken)
-        {
-            page = new FacebookPage(accessToken);
-            return this;
-        }
+        //private FacebookFacade Activate(string accessToken)
+        //{
+        //    page = new FacebookPage(accessToken);
+        //    return this;
+        //}
 
         /// <summary>
         /// Gets information of all the posts of type "picture" of the Page MQ163
@@ -77,16 +77,16 @@ namespace MQ163.Application.Facade
         /// Updates the Facebook Agent to use the new access Token
         /// </summary>
         /// <param name="accessToken">New Access Token to be used</param>
-        public FacebookFacade UpdateAccessToken(string accessToken)
-        {
-            try
-            {
-                return Activate(accessToken);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+        //public FacebookFacade UpdateAccessToken(string accessToken)
+        //{
+        //    try
+        //    {
+        //        return Activate(accessToken);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
     }
 }

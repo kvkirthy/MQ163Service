@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 using Facebook;
 using MQ163.External.Facebook;
+using MQ163Service.Facebook;
 
 namespace MQ163.Application.External
 {
@@ -15,8 +16,13 @@ namespace MQ163.Application.External
     {
         private FacebookClient client = new FacebookClient();
         private string baseUrl = "https://graph.facebook.com";
-        public string AccessToken { get; set; }
+        public string AccessToken { get; private set; }
         public bool IsLogged { get; set; }
+
+        public FacebookAgent()
+        {
+            AccessToken = CommonData.AuthToken;
+        }
 
         /// <summary>
         /// Gets the FacebookLogin Url to be Navigated

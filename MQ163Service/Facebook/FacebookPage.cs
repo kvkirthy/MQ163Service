@@ -18,7 +18,7 @@ namespace MQ163.Application.External
         {
             if (null == fbAgent)
                 fbAgent = new FacebookAgent();
-            fbAgent.AccessToken = accessToken;
+            //fbAgent.AccessToken = accessToken;
         }
 
         #region IFacebookPage Members

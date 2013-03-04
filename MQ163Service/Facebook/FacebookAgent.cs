@@ -22,6 +22,7 @@ namespace MQ163.Application.External
         public FacebookAgent()
         {
             AccessToken = CommonData.AuthToken;
+            IsLogged = true;
         }
 
         /// <summary>
@@ -304,7 +305,7 @@ namespace MQ163.Application.External
                         profile.Id = userProfile["id"].ToString();
                         profile.FirstName = userProfile["first_name"].ToString();
                         profile.LastName = userProfile["last_name"].ToString();
-                        profile.ProfilePicture = GetProfilePictureURL(userProfile["id"].ToString());
+                        //profile.ProfilePicture = GetProfilePictureURL(userProfile["id"].ToString());
                         profile.UserName = userProfile["username"].ToString();
                     }
                 }

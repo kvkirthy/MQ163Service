@@ -19,6 +19,7 @@ namespace MQ163Service.Controllers
             var facebookPosts = new FacebookFacade()
                     .Activate()
                     .GetAllPosts();
+            
 
             if (facebookPosts != null && facebookPosts.Count() > 0)
             {

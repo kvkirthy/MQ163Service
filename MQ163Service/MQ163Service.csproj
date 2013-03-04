@@ -132,6 +132,7 @@
     <Compile Include="Controllers\MerchandizeController.cs" />
     <Compile Include="Controllers\ProspectsController.cs" />
     <Compile Include="Controllers\SocialIntegratorController.cs" />
+    <Compile Include="Facebook\CommonData.cs" />
     <Compile Include="Facebook\Facebook.Facade.cs" />
     <Compile Include="Facebook\FacebookAgent.cs" />
     <Compile Include="Facebook\FacebookComment.cs" />
@@ -212,6 +213,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="DBScripts\MQ163script.sql" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Models\MQ163.dbml">

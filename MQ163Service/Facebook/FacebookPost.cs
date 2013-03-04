@@ -7,6 +7,9 @@ namespace MQ163.Application.External
     {
         #region IFacebookPost Members
 
+        public int CommentCount { get; set; }
+        public int LikeCount { get; set; }
+
         public IEnumerable<IFacebookProfile> Likes
         {
             get;

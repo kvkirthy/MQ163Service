@@ -16,6 +16,9 @@ namespace MQ163.External.Facebook
             set;
         }
 
+        int CommentCount { get; set; }
+        int LikeCount { get; set; }
+
         IEnumerable<FacebookComment> Comments
         {
             get;

@@ -57,7 +57,8 @@ namespace MQ163.Application.External
         {
             var json = new JavaScriptSerializer();
             List<IFacebookPost> postsList = new List<IFacebookPost>();
-            string Url = string.Format("{0}/MQ163/feed?filter={2}&access_token={1}", baseUrl, AccessToken, "app_2305272732");
+            //string Url = string.Format("{0}/MQ163/feed?filter={2}&access_token={1}", baseUrl, AccessToken, "app_2305272732");
+            string Url = string.Format("{0}/MQ163/posts?method=GET&format=json&access_token={1}", baseUrl,AccessToken);
 
             try
             {
@@ -68,18 +69,38 @@ namespace MQ163.Application.External
                     object[] feedsArray = (object[])feeds.FirstOrDefault(p => p.Key == "data").Value;
                     foreach (object feed in feedsArray)
                     {
-                        IFacebookPost post = null;
+                        IFacebookPost post = new FacebookPost();
                         Dictionary<string, object> feed2 = (Dictionary<string, object>)feed;
-                        if (feed2.Keys.Contains("message") && null != feed2["message"] && "photo" == feed2["type"].ToString())
+                        if (feed2.Keys.Contains("message") && null != feed2["message"])
                         {
-                            post = new FacebookPost();
+                            
                             post.PostText = feed2["message"].ToString();
                             post.Id = feed2["id"].ToString();
-                            post.PostPicture = feed2["picture"].ToString();
-                            post.Likes = GetAllLikesForPost(feed2["id"].ToString());
-                            post.Comments = GetAllCommentsForPost(feed2["id"].ToString());
-                            postsList.Add(post);
+                            
                         }
+
+                        if(feed2.Keys.Contains("comments")) {
+                            int value = 0;
+                            Int32.TryParse((feed2["comments"] as Dictionary<string, object>)["count"].ToString(), out value);
+                            post.CommentCount = value;
+                        }
+                        else{
+                            post.CommentCount = 0;
+                        }
+
+                        if (feed2.Keys.Contains("likes"))
+                        {
+                            int value = 0;
+                            Int32.TryParse((feed2["likes"] as Dictionary<string, object>)["count"].ToString(), out value);
+                            post.LikeCount = value;
+                        }
+                        else
+                        {
+                            post.CommentCount = 0;
+                        }
+
+
+                        postsList.Add(post);
                     }
                 }
                 return postsList;

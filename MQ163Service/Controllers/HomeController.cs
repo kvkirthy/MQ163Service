@@ -15,11 +15,16 @@ namespace MQ163Service.Controllers
             return View();
         }
 
+        public ActionResult Success()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Post()
         {
             CommonData.AuthToken = Request.Form["authToken"];
-            return Index();
+            return View("Success");
         }
     }
 }

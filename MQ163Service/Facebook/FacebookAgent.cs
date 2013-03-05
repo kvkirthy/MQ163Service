@@ -71,12 +71,16 @@ namespace MQ163.Application.External
                     {
                         IFacebookPost post = new FacebookPost();
                         Dictionary<string, object> feed2 = (Dictionary<string, object>)feed;
-                        if (feed2.Keys.Contains("message") && null != feed2["message"])
+
+                        post.Id = feed2["id"].ToString();
+
+                        if (feed2.Keys.Contains("message"))
                         {
-                            
                             post.PostText = feed2["message"].ToString();
-                            post.Id = feed2["id"].ToString();
-                            
+                        }
+                        else
+                        {
+                            post.PostText = "No message title.";
                         }
 
                         if(feed2.Keys.Contains("comments")) {

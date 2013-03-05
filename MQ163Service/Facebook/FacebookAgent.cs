@@ -12,7 +12,7 @@ using MQ163Service.Facebook;
 
 namespace MQ163.Application.External
 {
-    internal class FacebookAgent
+    internal class FacebookAgent : IDisposable
     {
         private FacebookClient client = new FacebookClient();
         private string baseUrl = "https://graph.facebook.com";
@@ -58,7 +58,7 @@ namespace MQ163.Application.External
             var json = new JavaScriptSerializer();
             List<IFacebookPost> postsList = new List<IFacebookPost>();
             //string Url = string.Format("{0}/MQ163/feed?filter={2}&access_token={1}", baseUrl, AccessToken, "app_2305272732");
-            string Url = string.Format("{0}/MQ163/posts?method=GET&format=json&access_token={1}", baseUrl,AccessToken);
+            string Url = string.Format("{0}/MQ163/posts?method=GET&format=json&access_token={1}", baseUrl, AccessToken);
 
             try
             {
@@ -83,12 +83,14 @@ namespace MQ163.Application.External
                             post.PostText = "No message title.";
                         }
 
-                        if(feed2.Keys.Contains("comments")) {
+                        if (feed2.Keys.Contains("comments"))
+                        {
                             int value = 0;
                             Int32.TryParse((feed2["comments"] as Dictionary<string, object>)["count"].ToString(), out value);
                             post.CommentCount = value;
                         }
-                        else{
+                        else
+                        {
                             post.CommentCount = 0;
                         }
 
@@ -127,19 +129,22 @@ namespace MQ163.Application.External
             {
                 string accessToken = GetPageAccessToken();
                 string albumID = GetAlbumID();
-                var fb = new FacebookClient();
                 postData.AccessToken = accessToken;
 
                 string path = string.Format("{0}/photos?access_token={1}", albumID, accessToken);
                 dynamic publishResponse;
                 if (null != postData.TaggedUserEmail)
-                    publishResponse = client.PostTaskAsync(path, postData.GetPostObject(GetUserID(postData.TaggedUserEmail).Id));
+                    publishResponse = client.PostTaskAsync(path, postData.GetPostObject());
                 else
-                    publishResponse = client.PostTaskAsync(path, postData.GetPostObject(String.Empty));
+                    publishResponse = client.PostTaskAsync(path, postData.GetPostObject());
 
                 while (publishResponse.Status == TaskStatus.WaitingForActivation) ;
                 if (publishResponse.Status == TaskStatus.RanToCompletion)
+                {
+                    string photoId = publishResponse.Result["post_id"];//post_id
+                    bool result = TaggingPhoto(photoId, GetUserID(postData.TaggedUserEmail).Id);
                     return true;
+                }
                 else if (publishResponse.Status == TaskStatus.Faulted)
                 {
                     throw (new InvalidOperationException((((Exception)publishResponse.Exception).InnerException).Message, (Exception)publishResponse.Exception));
@@ -150,6 +155,24 @@ namespace MQ163.Application.External
             {
                 throw ex;
             }
+        }
+
+        internal bool TaggingPhoto(string photoId, string userId)
+        {
+            dynamic parameters = new ExpandoObject();
+            var json = new JavaScriptSerializer();
+            parameters.tags = json.Serialize(new[] { new { tag_uid = userId, x = 1, y = 1 } });
+            //var fb = new FacebookClient();
+
+            string path = string.Format("{0}/tags?access_token={1}", photoId, AccessToken);
+            dynamic publishResponse;
+            publishResponse = client.GetTaskAsync(path, null);
+            while (publishResponse.Status == TaskStatus.WaitingForActivation) ;
+            if (publishResponse.Status == TaskStatus.RanToCompletion)
+            {
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -197,13 +220,16 @@ namespace MQ163.Application.External
         {
             try
             {
-                dynamic me = client.Get("/me/accounts");
+                var fb = new FacebookClient();
+                fb.AccessToken = this.AccessToken;
+                dynamic me = fb.Get("/me/accounts");
                 dynamic pages1 = me.data;
                 string accessToken = null;
                 string pageId1 = null;
+                string pageName = ConfigurationManager.AppSettings["Facebook:PageName"].ToString();
                 foreach (dynamic page in pages1)
                 {
-                    if (page.name == "MQ163")
+                    if (page.name == pageName)
                     {
                         pageId1 = page.id;
                         accessToken = page.access_token;
@@ -362,11 +388,12 @@ namespace MQ163.Application.External
                     if (userProfile.Count() > 0)
                     {
                         profile = new FacebookProfile();
-                        profile.Id = userProfile["id"].ToString();
-                        profile.FirstName = userProfile["first_name"].ToString();
-                        profile.LastName = userProfile["last_name"].ToString();
-                        profile.ProfilePicture = GetProfilePictureURL(userProfile["id"].ToString());
-                        profile.UserName = userProfile["username"].ToString();
+                        object[] userProfileArray = (object[])userProfile.FirstOrDefault(p => p.Key == "data").Value;
+                        foreach (object user in userProfileArray)
+                        {
+                            Dictionary<string, object> userProfileData = (Dictionary<string, object>)user;
+                            profile = GetUserProfile(userProfileData["id"].ToString());
+                        }
                     }
                 }
                 return profile;
@@ -401,5 +428,14 @@ namespace MQ163.Application.External
                 throw ex;
             }
         }
+
+        #region IDisposable Members
+
+        public void Dispose()
+        {
+            this.client = null;
+        }
+
+        #endregion
     }
 }

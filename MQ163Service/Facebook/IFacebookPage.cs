@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace MQ163.External.Facebook
 {
-    public interface IFacebookPage
+    public interface IFacebookPage : IDisposable
     {
         bool AddPost(IFacebookPostData postObject);
 

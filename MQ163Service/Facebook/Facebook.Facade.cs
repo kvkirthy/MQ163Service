@@ -5,7 +5,7 @@ using MQ163.Application.External;
 using MQ163.External.Facebook;
 namespace MQ163.Application.Facade
 {
-    public class FacebookFacade
+    public class FacebookFacade : IDisposable
     {
         private IFacebookPage page = null;
 
@@ -88,5 +88,14 @@ namespace MQ163.Application.Facade
         //        throw ex;
         //    }
         //}
+
+        #region IDisposable Members
+
+        public void Dispose()
+        {
+            this.page.Dispose();
+        }
+
+        #endregion
     }
 }

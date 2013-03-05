@@ -14,12 +14,12 @@ namespace MQ163.Application.External
         public string PictureUrl { get; set; }
         public string AccessToken { get; set; }
 
-        public dynamic GetPostObject(string userID)
+        public dynamic GetPostObject()
         {
             dynamic parameters = new ExpandoObject();
             parameters.message = Message;
-            parameters.tags = new[] { new { tag_uid = userID, x = 1, y = 1 } }; ;
-            parameters.url = PictureUrl;
+            //parameters.tags = new[] { new { tag_uid = userID, x = 1, y = 1 } };
+            //parameters.url = PictureUrl;
             parameters.source = new FacebookMediaObject
                 {
                     ContentType = "image/jpeg",

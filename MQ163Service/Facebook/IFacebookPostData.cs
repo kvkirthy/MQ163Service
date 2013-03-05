@@ -9,6 +9,6 @@ namespace MQ163.External.Facebook
         string PictureUrl { get; set; }
         string AccessToken { get; set; }
 
-        dynamic GetPostObject(string userID);
+        dynamic GetPostObject();
     }
 }

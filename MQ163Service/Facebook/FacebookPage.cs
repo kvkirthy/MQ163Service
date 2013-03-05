@@ -66,5 +66,14 @@ namespace MQ163.Application.External
         }
 
         #endregion
+
+        #region IDisposable Members
+
+        public void Dispose()
+        {
+            this.fbAgent.Dispose();
+        }
+
+        #endregion
     }
 }

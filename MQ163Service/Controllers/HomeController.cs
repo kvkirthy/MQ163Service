@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using MQ163.Application.Facade;
 using MQ163Service.Facebook;
 
 namespace MQ163Service.Controllers
@@ -24,6 +21,14 @@ namespace MQ163Service.Controllers
         public ActionResult Post()
         {
             CommonData.AuthToken = Request.Form["authToken"];
+            return View("Success");
+        }
+
+        [HttpPost]
+        public ActionResult AddPost()
+        {
+            FacebookFacade facade = new FacebookFacade().Activate();
+            facade.AddPost("This is TEst image1", @"C:\Users\Public\Pictures\Sample Pictures\Penguins.jpg", "seshumiriyala@gmail.com");
             return View("Success");
         }
     }

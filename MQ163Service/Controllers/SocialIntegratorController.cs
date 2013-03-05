@@ -11,30 +11,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
+using MQ163.Application.Facade;
 
 namespace MQ163Service.Controllers
 {
     public class SocialIntegratorController : ApiController
-    {
-        //public void Post([FromBody]byte[] image)
-        //{
-        //    var file = new FileInfo(@"C:\Users\VenCKi\AppData\Local\" + Guid.NewGuid().ToString());
-
-        //    //file.Create();
-            
-        //    var fileWriter = file.OpenWrite();
-        //    fileWriter.Write(image, 0, image.Count());
-        //    fileWriter.Close();
-        //}
-
-        //[HttpPost]
-        //public void Post([FromBody]string sample)
-        //{
-
-        //}
-
+    {  
         public async Task<HttpResponseMessage> PostFormData()
         {
+            string fileUri = string.Empty;
+            string messageCaption = string.Empty, taggedUserEmail = string.Empty;
             // Check if the request contains multipart/form-data.
             if (!Request.Content.IsMimeMultipartContent())
             {
@@ -49,22 +35,19 @@ namespace MQ163Service.Controllers
                 // Read the form data.
                 await Request.Content.ReadAsMultipartAsync(provider);
 
-                var sb = new StringBuilder();
-
-                //foreach( provider.FormData
-
                 // This illustrates how to get the file names.
                 foreach (MultipartFileData file in provider.FileData)
                 {
-                    sb.Append("---");
-                    sb.Append(file.Headers.ContentDisposition.FileName);
-                    sb.Append("Server file path: " + file.LocalFileName);
+                    fileUri = Path.Combine(file.Headers.ContentDisposition.FileName, file.LocalFileName);
                 }
 
-                sb.Append(provider.FormData.Get("caption"));
+                messageCaption = provider.FormData.Get("caption");
+                taggedUserEmail = provider.FormData.Get("tagUser");
 
-                //return Request.CreateResponse(HttpStatusCode.OK);
-               return Request.CreateErrorResponse(HttpStatusCode.Accepted, sb.ToString());
+                new FacebookFacade().AddPost(messageCaption, fileUri, taggedUserEmail);
+
+               return Request.CreateResponse(HttpStatusCode.OK);
+               //return Request.CreateErrorResponse(HttpStatusCode.Accepted, sb.ToString());
             }
             catch (System.Exception e)
             {

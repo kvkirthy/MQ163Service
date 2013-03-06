@@ -38,13 +38,15 @@ namespace MQ163Service.Controllers
                 // This illustrates how to get the file names.
                 foreach (MultipartFileData file in provider.FileData)
                 {
-                    fileUri = Path.Combine(file.Headers.ContentDisposition.FileName, file.LocalFileName);
+                    fileUri = file.LocalFileName;
                 }
 
                 messageCaption = provider.FormData.Get("caption");
                 taggedUserEmail = provider.FormData.Get("tagUser");
 
-                new FacebookFacade().AddPost(messageCaption, fileUri, taggedUserEmail);
+                new FacebookFacade()
+                    .Activate()
+                    .AddPost(messageCaption, fileUri, taggedUserEmail);
 
                return Request.CreateResponse(HttpStatusCode.OK);
                //return Request.CreateErrorResponse(HttpStatusCode.Accepted, sb.ToString());

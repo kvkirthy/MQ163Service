@@ -133,16 +133,20 @@ namespace MQ163.Application.External
 
                 string path = string.Format("{0}/photos?access_token={1}", albumID, accessToken);
                 dynamic publishResponse;
-                if (null != postData.TaggedUserEmail)
+                
+                /*if (null != postData.TaggedUserEmail)
                     publishResponse = client.PostTaskAsync(path, postData.GetPostObject());
-                else
-                    publishResponse = client.PostTaskAsync(path, postData.GetPostObject());
+                else*/
+                publishResponse = client.PostTaskAsync(path, postData.GetPostObject());
 
                 while (publishResponse.Status == TaskStatus.WaitingForActivation) ;
                 if (publishResponse.Status == TaskStatus.RanToCompletion)
                 {
                     string photoId = publishResponse.Result["post_id"];//post_id
-                    bool result = TaggingPhoto(photoId, GetUserID(postData.TaggedUserEmail).Id);
+                    if (null != postData.TaggedUserEmail)
+                    {
+                        bool result = TaggingPhoto(photoId, GetUserID(postData.TaggedUserEmail).Id);
+                    }
                     return true;
                 }
                 else if (publishResponse.Status == TaskStatus.Faulted)

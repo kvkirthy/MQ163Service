@@ -254,7 +254,7 @@ namespace MQ163.Application.External
         /// </summary>
         /// <param name="postId">Facebook post ID</param>
         /// <returns>Returns the list of comments for the post</returns>
-        private IEnumerable<FacebookComment> GetAllCommentsForPost(string postId)
+        internal IEnumerable<FacebookComment> GetAllCommentsForPost(string postId)
         {
             try
             {
@@ -302,7 +302,7 @@ namespace MQ163.Application.External
         /// </summary>
         /// <param name="postId">Facebook post ID</param>
         /// <returns>Returns list of likes for the post</returns>
-        private IEnumerable<IFacebookProfile> GetAllLikesForPost(string postId)
+        internal IEnumerable<IFacebookProfile> GetAllLikesForPost(string postId)
         {
             try
             {

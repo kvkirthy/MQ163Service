@@ -5,8 +5,12 @@ namespace MQ163.External.Facebook
 {
     public interface IFacebookPage : IDisposable
     {
-        bool AddPost(IFacebookPostData postObject);
+        internal bool AddPost(IFacebookPostData postObject);
 
-        IEnumerable<IFacebookPost> GetAllPosts();
+        internal IEnumerable<IFacebookPost> GetAllPosts();
+
+        internal IEnumerable<FacebookComment> GetAllCommentsForPost(string postID);
+
+        internal IEnumerable<IFacebookProfile> GetAllLikesForPost(string postID);
     }
 }

@@ -29,7 +29,7 @@ namespace MQ163.Application.External
         /// <param name="postObject">Data to be posted</param>
         /// <returns>Returns True: If posted successfully. 
         /// Exception: If post is unsuccessfull</returns>
-        public bool AddPost(IFacebookPostData postObject)
+        internal bool AddPost(IFacebookPostData postObject)
         {
             try
             {
@@ -49,13 +49,55 @@ namespace MQ163.Application.External
         /// Gets all the News Feeds of the MQ163 page with type "Picture"
         /// </summary>
         /// <returns>Returns all the posts of the page</returns>
-        public IEnumerable<IFacebookPost> GetAllPosts()
+        internal IEnumerable<IFacebookPost> GetAllPosts()
         {
             try
             {
                 if (fbAgent.IsLogged)
                 {
                     return fbAgent.GetAllFeeds();
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Gets all the comments for the given post ID
+        /// </summary>
+        /// <param name="postID">Post ID</param>
+        /// <returns></returns>
+        internal IEnumerable<FacebookComment> GetAllCommentsForPost(string postID)
+        {
+            try
+            {
+                if (fbAgent.IsLogged)
+                {
+                    return fbAgent.GetAllCommentsForPost(postID);
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Gets the Profiles of the users who liked the post
+        /// </summary>
+        /// <param name="postID">Post ID</param>
+        /// <returns></returns>
+        internal IEnumerable<IFacebookProfile> GetAllLikesForPost(string postID)
+        {
+            try
+            {
+                if (fbAgent.IsLogged)
+                {
+                    return fbAgent.GetAllLikesForPost(postID);
                 }
                 return null;
             }

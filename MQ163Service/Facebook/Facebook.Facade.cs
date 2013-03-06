@@ -74,6 +74,40 @@ namespace MQ163.Application.Facade
         }
 
         /// <summary>
+        /// Gets all the comments for the given post ID
+        /// </summary>
+        /// <param name="postID">Post ID</param>
+        /// <returns>Returns List of all the comments for the post</returns>
+        public IEnumerable<FacebookComment> GetAllCommentsForPost(string postID)
+        {
+            try
+            {
+                return page.GetAllCommentsForPost(postID);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Gets the Profiles of the users who liked the post
+        /// </summary>
+        /// <param name="postID">Post ID</param>
+        /// <returns>Returns list of all the likes for the post</returns>
+        internal IEnumerable<IFacebookProfile> GetAllLikesForPost(string postID)
+        {
+            try
+            {
+                return page.GetAllLikesForPost(postID);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
         /// Updates the Facebook Agent to use the new access Token
         /// </summary>
         /// <param name="accessToken">New Access Token to be used</param>

@@ -9,14 +9,15 @@ namespace MQ163.Application.Facade
     {
         private IFacebookPage page = null;
 
-        /// <summary>
-        /// Activates the FaceBook Page
-        /// </summary>
-        public FacebookFacade Activate()
+        //TOBE: Used by the tests only
+        public FacebookFacade(IFacebookPage page)
+        {
+            this.page = page;
+        }
+
+        public FacebookFacade()
         {
             page = new FacebookPage();
-            return this;
-
         }
 
         /// <summary>
@@ -39,7 +40,7 @@ namespace MQ163.Application.Facade
             {
                 if (null == page)
                 {
-                    Activate();
+                    page = new FacebookPage();
                 }
                 return page.GetAllPosts();
             }
@@ -56,10 +57,12 @@ namespace MQ163.Application.Facade
         /// <param name="picUrl">Picture URL</param>
         /// <param name="taggedUserEmail">emial ID of the User tagged in the Post</param>
         /// <returns></returns>
-        public bool AddPost(string message, string picUrl, string taggedUserEmail)
+        public bool PostPictureMesssage(string message, string picUrl, string taggedUserEmail)
         {
             try
             {
+                if (null == picUrl)
+                    throw new ArgumentNullException("PicUrl", "Cannot post an empty image to Facebook.");
                 IFacebookPostData data = new FacebookPostData();
                 data.Message = message;
                 data.PictureUrl = picUrl;
@@ -82,6 +85,8 @@ namespace MQ163.Application.Facade
         {
             try
             {
+                if (null == postID)
+                    throw new ArgumentNullException("PostID", "Cannot get the comments for null post ID.");
                 return page.GetAllCommentsForPost(postID);
             }
             catch (Exception ex)
@@ -95,10 +100,12 @@ namespace MQ163.Application.Facade
         /// </summary>
         /// <param name="postID">Post ID</param>
         /// <returns>Returns list of all the likes for the post</returns>
-        internal IEnumerable<IFacebookProfile> GetAllLikesForPost(string postID)
+        public IEnumerable<IFacebookProfile> GetAllLikesForPost(string postID)
         {
             try
             {
+                if (null == postID)
+                    throw new ArgumentNullException("PostID", "Cannot get like for null post ID.");
                 return page.GetAllLikesForPost(postID);
             }
             catch (Exception ex)

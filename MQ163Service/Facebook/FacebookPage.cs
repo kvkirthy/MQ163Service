@@ -29,7 +29,7 @@ namespace MQ163.Application.External
         /// <param name="postObject">Data to be posted</param>
         /// <returns>Returns True: If posted successfully. 
         /// Exception: If post is unsuccessfull</returns>
-        internal bool AddPost(IFacebookPostData postObject)
+        public bool AddPost(IFacebookPostData postObject)
         {
             try
             {
@@ -49,7 +49,7 @@ namespace MQ163.Application.External
         /// Gets all the News Feeds of the MQ163 page with type "Picture"
         /// </summary>
         /// <returns>Returns all the posts of the page</returns>
-        internal IEnumerable<IFacebookPost> GetAllPosts()
+        public IEnumerable<IFacebookPost> GetAllPosts()
         {
             try
             {
@@ -70,7 +70,7 @@ namespace MQ163.Application.External
         /// </summary>
         /// <param name="postID">Post ID</param>
         /// <returns></returns>
-        internal IEnumerable<FacebookComment> GetAllCommentsForPost(string postID)
+        public IEnumerable<FacebookComment> GetAllCommentsForPost(string postID)
         {
             try
             {
@@ -91,7 +91,7 @@ namespace MQ163.Application.External
         /// </summary>
         /// <param name="postID">Post ID</param>
         /// <returns></returns>
-        internal IEnumerable<IFacebookProfile> GetAllLikesForPost(string postID)
+        public IEnumerable<IFacebookProfile> GetAllLikesForPost(string postID)
         {
             try
             {

@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
-using System.Linq;
-using System.Net;
+﻿using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
@@ -16,7 +8,7 @@ using MQ163.Application.Facade;
 namespace MQ163Service.Controllers
 {
     public class SocialIntegratorController : ApiController
-    {  
+    {
         public async Task<HttpResponseMessage> PostFormData()
         {
             string fileUri = string.Empty;
@@ -45,11 +37,10 @@ namespace MQ163Service.Controllers
                 taggedUserEmail = provider.FormData.Get("tagUser");
 
                 new FacebookFacade()
-                    .Activate()
-                    .AddPost(messageCaption, fileUri, taggedUserEmail);
+                    .PostPictureMesssage(messageCaption, fileUri, taggedUserEmail);
 
-               return Request.CreateResponse(HttpStatusCode.OK);
-               //return Request.CreateErrorResponse(HttpStatusCode.Accepted, sb.ToString());
+                return Request.CreateResponse(HttpStatusCode.OK);
+                //return Request.CreateErrorResponse(HttpStatusCode.Accepted, sb.ToString());
             }
             catch (System.Exception e)
             {

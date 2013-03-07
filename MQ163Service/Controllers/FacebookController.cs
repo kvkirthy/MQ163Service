@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using MQ163.Application.Facade;
 using Newtonsoft.Json.Linq;
@@ -13,13 +11,12 @@ namespace MQ163Service.Controllers
     {
         public IEnumerable<JObject> Get()
         {
- 
+
             var jObjects = new List<JObject>();
 
             var facebookPosts = new FacebookFacade()
-                    .Activate()
                     .GetAllPosts();
-            
+
 
             if (facebookPosts != null && facebookPosts.Count() > 0)
             {
@@ -32,7 +29,7 @@ namespace MQ163Service.Controllers
             }
 
             return jObjects;
-           
+
         }
     }
 }

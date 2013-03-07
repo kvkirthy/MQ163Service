@@ -27,8 +27,8 @@ namespace MQ163Service.Controllers
         [HttpPost]
         public ActionResult AddPost()
         {
-            FacebookFacade facade = new FacebookFacade().Activate();
-            facade.AddPost("This is TEst image1", @"C:\Users\Public\Pictures\Sample Pictures\Penguins.jpg", "seshumiriyala@gmail.com");
+            FacebookFacade facade = new FacebookFacade();
+            facade.PostPictureMesssage("This is TEst image1", @"C:\Users\Public\Pictures\Sample Pictures\Penguins.jpg", "seshumiriyala@gmail.com");
             return View("Success");
         }
     }

@@ -285,6 +285,7 @@ namespace MQ163.Application.External
                                     facebookComment.User = GetUserProfile(commentedUser["id"].ToString());
                                 }
                                 facebookComment.IsSupportive = (null != comment2["user_likes"] ? Convert.ToBoolean(comment2["user_likes"].ToString()) : false);
+                                commentsList.Add(facebookComment);
                             }
                         }
                     }
@@ -357,11 +358,11 @@ namespace MQ163.Application.External
                     if (userProfile.Count() > 0)
                     {
                         profile = new FacebookProfile();
-                        profile.Id = userProfile["id"].ToString();
-                        profile.FirstName = userProfile["first_name"].ToString();
-                        profile.LastName = userProfile["last_name"].ToString();
+                        profile.Id = (userProfile.ContainsKey("id"))?userProfile["id"].ToString():string.Empty;
+                        profile.FirstName = (userProfile.ContainsKey("first_name"))?userProfile["first_name"].ToString():"- ";
+                        profile.LastName = (userProfile.ContainsKey("last_name"))?userProfile["last_name"].ToString() : "- ";
                         //profile.ProfilePicture = GetProfilePictureURL(userProfile["id"].ToString());
-                        profile.UserName = userProfile["username"].ToString();
+                        profile.UserName = (userProfile.ContainsKey("username"))?userProfile["username"].ToString():"- ";
                     }
                 }
                 return profile;

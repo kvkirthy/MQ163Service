@@ -17,7 +17,6 @@ namespace MQ163Service.Controllers
             var facebookPosts = new FacebookFacade()
                     .GetAllPosts();
 
-
             if (facebookPosts != null && facebookPosts.Count() > 0)
             {
                 facebookPosts.ToList()
@@ -30,6 +29,28 @@ namespace MQ163Service.Controllers
 
             return jObjects;
 
+        }
+
+       
+        [ActionName("comments")]
+        public IEnumerable<JObject> GetComments(string postId)
+        {
+            var jObjects = new List<JObject>();
+
+            var facebookPosts = new FacebookFacade()
+                    .GetAllCommentsForPost(postId);
+
+            if (facebookPosts != null && facebookPosts.Count() > 0)
+            {
+                facebookPosts.ToList()
+                    .ForEach(x => jObjects.Add(JObject.FromObject(x)));
+            }
+            else
+            {
+                throw new HttpResponseException(HttpStatusCode.NoContent);
+            }
+
+            return jObjects;
         }
     }
 }

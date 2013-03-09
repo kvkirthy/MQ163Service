@@ -33,6 +33,13 @@ namespace MQ163Service.Controllers
 
             return prospects;
         }
+
+        [HttpGet,ActionName("CreateLead")]
+        public void CreateLead(string fullName)
+        {
+            DataAccess.CreateLead(fullName);
+        }
+
     }
 
 }

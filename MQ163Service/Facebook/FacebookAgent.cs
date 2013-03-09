@@ -132,7 +132,7 @@ namespace MQ163.Application.External
                 string albumID = GetAlbumID();
                 postData.AccessToken = accessToken;
 
-                string path = string.Format("{0}/photos?access_token={1}", albumID, accessToken);
+                string path = string.Format("{0}/photos?access_token={1}", "MQ163", accessToken);
                 dynamic publishResponse;
                 
                 /*if (null != postData.TaggedUserEmail)

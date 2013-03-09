@@ -34,7 +34,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MQ163Service.Fakes">
+      <HintPath>FakesAssemblies\MQ163Service.Fakes.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -94,7 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Facebook\Facebook.Facade.Test.cs" />
-    <Compile Include="Facebook\FacebookPage.cs" />
+    <Compile Include="Facebook\FacebookPage.Test.cs" />
     <Compile Include="Mocked Classes\FacebookPage.Mock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\ValuesControllerTest.cs" />
@@ -103,6 +107,7 @@
     <Content Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Fakes Include="Fakes\MQ163Service.fakes" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

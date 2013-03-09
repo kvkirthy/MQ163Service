@@ -1,0 +1,24 @@
+C:\Seshu\Projects\MQ163Service\MQ163Service.Tests\Fakes\MQ163Service.fakes : warning : Cannot generate stub for MQ163Service.WebApiConfig: type is sealed.
+C:\Seshu\Projects\MQ163Service\MQ163Service.Tests\Fakes\MQ163Service.fakes : warning : Cannot generate stub for MQ163.Application.External.FacebookAgent: type is not visible to exported or assembly(MQ163Service.Fakes).
+C:\Seshu\Projects\MQ163Service\MQ163Service.Tests\Fakes\MQ163Service.fakes : warning : Cannot generate stub for MQ163.Application.External.FacebookPage: type is not visible to exported or assembly(MQ163Service.Fakes).
+C:\Seshu\Projects\MQ163Service\MQ163Service.Tests\Fakes\MQ163Service.fakes : warning : Cannot generate stub for <>f__AnonymousType0`3: type is sealed.
+C:\Seshu\Projects\MQ163Service\MQ163Service.Tests\Fakes\MQ163Service.fakes : warning : Cannot generate stub for <>f__AnonymousType1`1: type is sealed.
+C:\Seshu\Projects\MQ163Service\MQ163Service.Tests\Fakes\MQ163Service.fakes : warning : Cannot generate stub for <>f__AnonymousType2`3: type is sealed.
+C:\Seshu\Projects\MQ163Service\MQ163Service.Tests\Fakes\MQ163Service.fakes : warning : Cannot generate stub for <>f__AnonymousType3`1: type is sealed.
+C:\Seshu\Projects\MQ163Service\MQ163Service.Tests\Fakes\MQ163Service.fakes : warning : Cannot generate shim for MQ163Service.Controllers.FacebookController+<>c__DisplayClass2: type is not supported because of internal limitations.
+C:\Seshu\Projects\MQ163Service\MQ163Service.Tests\Fakes\MQ163Service.fakes : warning : Cannot generate shim for MQ163Service.Controllers.FacebookController+<>c__DisplayClass6: type is not supported because of internal limitations.
+C:\Seshu\Projects\MQ163Service\MQ163Service.Tests\Fakes\MQ163Service.fakes : warning : Cannot generate shim for MQ163Service.Controllers.MerchandizeController+<>c__DisplayClass1: type is not supported because of internal limitations.
+C:\Seshu\Projects\MQ163Service\MQ163Service.Tests\Fakes\MQ163Service.fakes : warning : Cannot generate shim for MQ163Service.Controllers.ProspectsController+<>c__DisplayClass4: type is not supported because of internal limitations.
+C:\Seshu\Projects\MQ163Service\MQ163Service.Tests\Fakes\MQ163Service.fakes : warning : Cannot generate shim for MQ163Service.Controllers.SocialIntegratorController+<PostFormData>d__0: type is not supported because of internal limitations.
+C:\Seshu\Projects\MQ163Service\MQ163Service.Tests\Fakes\MQ163Service.fakes : warning : Cannot generate shim for MQ163.Application.External.IFacebookAgent: type is an interface.
+C:\Seshu\Projects\MQ163Service\MQ163Service.Tests\Fakes\MQ163Service.fakes : warning : Cannot generate shim for MQ163.Application.External.FacebookAgent: type is not visible to exported or assembly(MQ163Service.Fakes).
+C:\Seshu\Projects\MQ163Service\MQ163Service.Tests\Fakes\MQ163Service.fakes : warning : Cannot generate shim for MQ163.External.Facebook.IFacebookPage: type is an interface.
+C:\Seshu\Projects\MQ163Service\MQ163Service.Tests\Fakes\MQ163Service.fakes : warning : Cannot generate shim for MQ163.Application.External.FacebookPage: type is not visible to exported or assembly(MQ163Service.Fakes).
+C:\Seshu\Projects\MQ163Service\MQ163Service.Tests\Fakes\MQ163Service.fakes : warning : Cannot generate shim for MQ163.External.Facebook.IFacebookPost: type is an interface.
+C:\Seshu\Projects\MQ163Service\MQ163Service.Tests\Fakes\MQ163Service.fakes : warning : Cannot generate shim for MQ163.External.Facebook.IFacebookPostData: type is an interface.
+C:\Seshu\Projects\MQ163Service\MQ163Service.Tests\Fakes\MQ163Service.fakes : warning : Cannot generate shim for MQ163.Application.External.FacebookPostData+<GetPostObject>o__SiteContainer1: type is not supported because of internal limitations.
+C:\Seshu\Projects\MQ163Service\MQ163Service.Tests\Fakes\MQ163Service.fakes : warning : Cannot generate shim for MQ163.External.Facebook.IFacebookProfile: type is an interface.
+C:\Seshu\Projects\MQ163Service\MQ163Service.Tests\Fakes\MQ163Service.fakes : warning : Cannot generate shim for <>f__AnonymousType0`3: type is not supported because of internal limitations.
+C:\Seshu\Projects\MQ163Service\MQ163Service.Tests\Fakes\MQ163Service.fakes : warning : Cannot generate shim for <>f__AnonymousType1`1: type is not supported because of internal limitations.
+C:\Seshu\Projects\MQ163Service\MQ163Service.Tests\Fakes\MQ163Service.fakes : warning : Cannot generate shim for <>f__AnonymousType2`3: type is not supported because of internal limitations.
+C:\Seshu\Projects\MQ163Service\MQ163Service.Tests\Fakes\MQ163Service.fakes : warning : Cannot generate shim for <>f__AnonymousType3`1: type is not supported because of internal limitations.

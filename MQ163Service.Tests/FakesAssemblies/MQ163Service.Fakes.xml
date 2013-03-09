@@ -1,0 +1,2270 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MQ163Service.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:MQ163.Application.External.Fakes.ShimFacebookPost">
+            <summary>Shim type of MQ163.Application.External.FacebookPost</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.ShimFacebookPost.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.ShimFacebookPost.#ctor(MQ163.Application.External.FacebookPost)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.ShimFacebookPost.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.ShimFacebookPost.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.ShimFacebookPost.Bind(MQ163.External.Facebook.IFacebookPost)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.CommentCountGet">
+            <summary>Sets the shim of FacebookPost.get_CommentCount()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.CommentCountSetInt32">
+            <summary>Sets the shim of FacebookPost.set_CommentCount(Int32 value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.CommentsGet">
+            <summary>Sets the shim of FacebookPost.get_Comments()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.CommentsSetIEnumerableOfFacebookComment">
+            <summary>Sets the shim of FacebookPost.set_Comments(IEnumerable`1&lt;FacebookComment&gt; value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.Constructor">
+            <summary>Sets the shim of FacebookPost.FacebookPost()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.IdGet">
+            <summary>Sets the shim of FacebookPost.get_Id()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.IdSetString">
+            <summary>Sets the shim of FacebookPost.set_Id(String value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.LikeCountGet">
+            <summary>Sets the shim of FacebookPost.get_LikeCount()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.LikeCountSetInt32">
+            <summary>Sets the shim of FacebookPost.set_LikeCount(Int32 value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.LikesGet">
+            <summary>Sets the shim of FacebookPost.get_Likes()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.LikesSetIEnumerableOfIFacebookProfile">
+            <summary>Sets the shim of FacebookPost.set_Likes(IEnumerable`1&lt;IFacebookProfile&gt; value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.PostPictureGet">
+            <summary>Sets the shim of FacebookPost.get_PostPicture()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.PostPictureSetString">
+            <summary>Sets the shim of FacebookPost.set_PostPicture(String value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.PostTextGet">
+            <summary>Sets the shim of FacebookPost.get_PostText()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.PostTextSetString">
+            <summary>Sets the shim of FacebookPost.set_PostText(String value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.RepostsGet">
+            <summary>Sets the shim of FacebookPost.get_Reposts()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.RepostsSetIEnumerableOfIFacebookProfile">
+            <summary>Sets the shim of FacebookPost.set_Reposts(IEnumerable`1&lt;IFacebookProfile&gt; value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.TagsGet">
+            <summary>Sets the shim of FacebookPost.get_Tags()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.TagsSetIEnumerableOfIFacebookProfile">
+            <summary>Sets the shim of FacebookPost.set_Tags(IEnumerable`1&lt;IFacebookProfile&gt; value)</summary>
+        </member>
+        <member name="T:MQ163.Application.External.Fakes.ShimFacebookPost.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.AllInstances.CommentCountGet">
+            <summary>Sets the shim of FacebookPost.get_CommentCount()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.AllInstances.CommentCountSetInt32">
+            <summary>Sets the shim of FacebookPost.set_CommentCount(Int32 value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.AllInstances.CommentsGet">
+            <summary>Sets the shim of FacebookPost.get_Comments()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.AllInstances.CommentsSetIEnumerableOfFacebookComment">
+            <summary>Sets the shim of FacebookPost.set_Comments(IEnumerable`1&lt;FacebookComment&gt; value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.AllInstances.IdGet">
+            <summary>Sets the shim of FacebookPost.get_Id()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.AllInstances.IdSetString">
+            <summary>Sets the shim of FacebookPost.set_Id(String value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.AllInstances.LikeCountGet">
+            <summary>Sets the shim of FacebookPost.get_LikeCount()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.AllInstances.LikeCountSetInt32">
+            <summary>Sets the shim of FacebookPost.set_LikeCount(Int32 value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.AllInstances.LikesGet">
+            <summary>Sets the shim of FacebookPost.get_Likes()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.AllInstances.LikesSetIEnumerableOfIFacebookProfile">
+            <summary>Sets the shim of FacebookPost.set_Likes(IEnumerable`1&lt;IFacebookProfile&gt; value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.AllInstances.PostPictureGet">
+            <summary>Sets the shim of FacebookPost.get_PostPicture()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.AllInstances.PostPictureSetString">
+            <summary>Sets the shim of FacebookPost.set_PostPicture(String value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.AllInstances.PostTextGet">
+            <summary>Sets the shim of FacebookPost.get_PostText()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.AllInstances.PostTextSetString">
+            <summary>Sets the shim of FacebookPost.set_PostText(String value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.AllInstances.RepostsGet">
+            <summary>Sets the shim of FacebookPost.get_Reposts()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.AllInstances.RepostsSetIEnumerableOfIFacebookProfile">
+            <summary>Sets the shim of FacebookPost.set_Reposts(IEnumerable`1&lt;IFacebookProfile&gt; value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.AllInstances.TagsGet">
+            <summary>Sets the shim of FacebookPost.get_Tags()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPost.AllInstances.TagsSetIEnumerableOfIFacebookProfile">
+            <summary>Sets the shim of FacebookPost.set_Tags(IEnumerable`1&lt;IFacebookProfile&gt; value)</summary>
+        </member>
+        <member name="T:MQ163.Application.External.Fakes.ShimFacebookPostData">
+            <summary>Shim type of MQ163.Application.External.FacebookPostData</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.ShimFacebookPostData.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.ShimFacebookPostData.#ctor(MQ163.Application.External.FacebookPostData)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.ShimFacebookPostData.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.ShimFacebookPostData.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.ShimFacebookPostData.Bind(MQ163.External.Facebook.IFacebookPostData)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPostData.AccessTokenGet">
+            <summary>Sets the shim of FacebookPostData.get_AccessToken()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPostData.AccessTokenSetString">
+            <summary>Sets the shim of FacebookPostData.set_AccessToken(String value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPostData.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPostData.Constructor">
+            <summary>Sets the shim of FacebookPostData.FacebookPostData()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPostData.GetPostObject">
+            <summary>Sets the shim of FacebookPostData.GetPostObject()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPostData.MessageGet">
+            <summary>Sets the shim of FacebookPostData.get_Message()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPostData.MessageSetString">
+            <summary>Sets the shim of FacebookPostData.set_Message(String value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPostData.PictureUrlGet">
+            <summary>Sets the shim of FacebookPostData.get_PictureUrl()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPostData.PictureUrlSetString">
+            <summary>Sets the shim of FacebookPostData.set_PictureUrl(String value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPostData.TaggedUserEmailGet">
+            <summary>Sets the shim of FacebookPostData.get_TaggedUserEmail()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPostData.TaggedUserEmailSetString">
+            <summary>Sets the shim of FacebookPostData.set_TaggedUserEmail(String value)</summary>
+        </member>
+        <member name="T:MQ163.Application.External.Fakes.ShimFacebookPostData.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPostData.AllInstances.AccessTokenGet">
+            <summary>Sets the shim of FacebookPostData.get_AccessToken()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPostData.AllInstances.AccessTokenSetString">
+            <summary>Sets the shim of FacebookPostData.set_AccessToken(String value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPostData.AllInstances.GetPostObject">
+            <summary>Sets the shim of FacebookPostData.GetPostObject()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPostData.AllInstances.MessageGet">
+            <summary>Sets the shim of FacebookPostData.get_Message()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPostData.AllInstances.MessageSetString">
+            <summary>Sets the shim of FacebookPostData.set_Message(String value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPostData.AllInstances.PictureUrlGet">
+            <summary>Sets the shim of FacebookPostData.get_PictureUrl()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPostData.AllInstances.PictureUrlSetString">
+            <summary>Sets the shim of FacebookPostData.set_PictureUrl(String value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPostData.AllInstances.TaggedUserEmailGet">
+            <summary>Sets the shim of FacebookPostData.get_TaggedUserEmail()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookPostData.AllInstances.TaggedUserEmailSetString">
+            <summary>Sets the shim of FacebookPostData.set_TaggedUserEmail(String value)</summary>
+        </member>
+        <member name="T:MQ163.Application.External.Fakes.ShimFacebookProfile">
+            <summary>Shim type of MQ163.Application.External.FacebookProfile</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.ShimFacebookProfile.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.ShimFacebookProfile.#ctor(MQ163.Application.External.FacebookProfile)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.ShimFacebookProfile.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.ShimFacebookProfile.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.ShimFacebookProfile.Bind(MQ163.External.Facebook.IFacebookProfile)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookProfile.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookProfile.Constructor">
+            <summary>Sets the shim of FacebookProfile.FacebookProfile()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookProfile.FirstNameGet">
+            <summary>Sets the shim of FacebookProfile.get_FirstName()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookProfile.FirstNameSetString">
+            <summary>Sets the shim of FacebookProfile.set_FirstName(String value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookProfile.IdGet">
+            <summary>Sets the shim of FacebookProfile.get_Id()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookProfile.IdSetString">
+            <summary>Sets the shim of FacebookProfile.set_Id(String value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookProfile.LastNameGet">
+            <summary>Sets the shim of FacebookProfile.get_LastName()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookProfile.LastNameSetString">
+            <summary>Sets the shim of FacebookProfile.set_LastName(String value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookProfile.ProfilePictureGet">
+            <summary>Sets the shim of FacebookProfile.get_ProfilePicture()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookProfile.ProfilePictureSetString">
+            <summary>Sets the shim of FacebookProfile.set_ProfilePicture(String value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookProfile.UserNameGet">
+            <summary>Sets the shim of FacebookProfile.get_UserName()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookProfile.UserNameSetString">
+            <summary>Sets the shim of FacebookProfile.set_UserName(String value)</summary>
+        </member>
+        <member name="T:MQ163.Application.External.Fakes.ShimFacebookProfile.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookProfile.AllInstances.FirstNameGet">
+            <summary>Sets the shim of FacebookProfile.get_FirstName()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookProfile.AllInstances.FirstNameSetString">
+            <summary>Sets the shim of FacebookProfile.set_FirstName(String value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookProfile.AllInstances.IdGet">
+            <summary>Sets the shim of FacebookProfile.get_Id()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookProfile.AllInstances.IdSetString">
+            <summary>Sets the shim of FacebookProfile.set_Id(String value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookProfile.AllInstances.LastNameGet">
+            <summary>Sets the shim of FacebookProfile.get_LastName()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookProfile.AllInstances.LastNameSetString">
+            <summary>Sets the shim of FacebookProfile.set_LastName(String value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookProfile.AllInstances.ProfilePictureGet">
+            <summary>Sets the shim of FacebookProfile.get_ProfilePicture()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookProfile.AllInstances.ProfilePictureSetString">
+            <summary>Sets the shim of FacebookProfile.set_ProfilePicture(String value)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookProfile.AllInstances.UserNameGet">
+            <summary>Sets the shim of FacebookProfile.get_UserName()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.ShimFacebookProfile.AllInstances.UserNameSetString">
+            <summary>Sets the shim of FacebookProfile.set_UserName(String value)</summary>
+        </member>
+        <member name="T:MQ163.Application.External.Fakes.StubFacebookPost">
+            <summary>Stub type of MQ163.Application.External.FacebookPost</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.StubFacebookPost.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.StubFacebookPost.InitializeStub">
+            <summary>Initializes a new instance of type StubFacebookPost</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.StubFacebookPost.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.StubFacebookPost.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.StubFacebookPost.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:MQ163.Application.External.Fakes.StubFacebookPostData">
+            <summary>Stub type of MQ163.Application.External.FacebookPostData</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.StubFacebookPostData.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.StubFacebookPostData.InitializeStub">
+            <summary>Initializes a new instance of type StubFacebookPostData</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.StubFacebookPostData.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.StubFacebookPostData.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.StubFacebookPostData.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:MQ163.Application.External.Fakes.StubFacebookProfile">
+            <summary>Stub type of MQ163.Application.External.FacebookProfile</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.StubFacebookProfile.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.StubFacebookProfile.InitializeStub">
+            <summary>Initializes a new instance of type StubFacebookProfile</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.StubFacebookProfile.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.StubFacebookProfile.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.StubFacebookProfile.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:MQ163.Application.External.Fakes.StubIFacebookAgent">
+            <summary>Stub type of MQ163.Application.External.IFacebookAgent</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.StubIFacebookAgent.#ctor">
+            <summary>Initializes a new instance of type StubIFacebookAgent</summary>
+        </member>
+        <member name="F:MQ163.Application.External.Fakes.StubIFacebookAgent.AccessTokenGet">
+            <summary>Sets the stub of IFacebookAgent.get_AccessToken()</summary>
+        </member>
+        <member name="F:MQ163.Application.External.Fakes.StubIFacebookAgent.AddPostIFacebookPostData">
+            <summary>Sets the stub of IFacebookAgent.AddPost(IFacebookPostData postData)</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.StubIFacebookAgent.AttachBackingFieldToIsLogged">
+            <summary>Attaches delegates to emulate StubIFacebookAgent.IsLogged as a property with a backing field.</summary>
+        </member>
+        <member name="F:MQ163.Application.External.Fakes.StubIFacebookAgent.Dispose">
+            <summary>Sets the stub of IDisposable.Dispose()</summary>
+        </member>
+        <member name="F:MQ163.Application.External.Fakes.StubIFacebookAgent.GetAllCommentsForPostString">
+            <summary>Sets the stub of IFacebookAgent.GetAllCommentsForPost(String postId)</summary>
+        </member>
+        <member name="F:MQ163.Application.External.Fakes.StubIFacebookAgent.GetAllFeeds">
+            <summary>Sets the stub of IFacebookAgent.GetAllFeeds()</summary>
+        </member>
+        <member name="F:MQ163.Application.External.Fakes.StubIFacebookAgent.GetAllLikesForPostString">
+            <summary>Sets the stub of IFacebookAgent.GetAllLikesForPost(String postId)</summary>
+        </member>
+        <member name="F:MQ163.Application.External.Fakes.StubIFacebookAgent.GetFacebookLoginURL">
+            <summary>Sets the stub of IFacebookAgent.GetFacebookLoginURL()</summary>
+        </member>
+        <member name="F:MQ163.Application.External.Fakes.StubIFacebookAgent.IsLoggedGet">
+            <summary>Sets the stub of IFacebookAgent.get_IsLogged()</summary>
+        </member>
+        <member name="F:MQ163.Application.External.Fakes.StubIFacebookAgent.IsLoggedSetBoolean">
+            <summary>Sets the stub of IFacebookAgent.set_IsLogged(Boolean value)</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.StubIFacebookAgent.mq163s::MQ163#Application#External#IFacebookAgent#AddPost(MQ163.External.Facebook.IFacebookPostData)">
+            <summary>Sets the stub of IFacebookAgent.AddPost(IFacebookPostData postData)</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.StubIFacebookAgent.mq163s::MQ163#Application#External#IFacebookAgent#GetAllCommentsForPost(System.String)">
+            <summary>Sets the stub of IFacebookAgent.GetAllCommentsForPost(String postId)</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.StubIFacebookAgent.mq163s::MQ163#Application#External#IFacebookAgent#GetAllFeeds">
+            <summary>Sets the stub of IFacebookAgent.GetAllFeeds()</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.StubIFacebookAgent.mq163s::MQ163#Application#External#IFacebookAgent#GetAllLikesForPost(System.String)">
+            <summary>Sets the stub of IFacebookAgent.GetAllLikesForPost(String postId)</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.StubIFacebookAgent.mq163s::MQ163#Application#External#IFacebookAgent#GetFacebookLoginURL">
+            <summary>Sets the stub of IFacebookAgent.GetFacebookLoginURL()</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.StubIFacebookAgent.mq163s::MQ163#Application#External#IFacebookAgent#TaggingPhoto(System.String,System.String)">
+            <summary>Sets the stub of IFacebookAgent.TaggingPhoto(String photoId, String userId)</summary>
+        </member>
+        <member name="M:MQ163.Application.External.Fakes.StubIFacebookAgent.global::System#IDisposable#Dispose">
+            <summary>Sets the stub of IDisposable.Dispose()</summary>
+        </member>
+        <member name="F:MQ163.Application.External.Fakes.StubIFacebookAgent.TaggingPhotoStringString">
+            <summary>Sets the stub of IFacebookAgent.TaggingPhoto(String photoId, String userId)</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.StubIFacebookAgent.mq163s::MQ163#Application#External#IFacebookAgent#AccessToken">
+            <summary>Sets the stub of IFacebookAgent.get_AccessToken()</summary>
+        </member>
+        <member name="P:MQ163.Application.External.Fakes.StubIFacebookAgent.mq163s::MQ163#Application#External#IFacebookAgent#IsLogged">
+            <summary>Sets the stub of IFacebookAgent.get_IsLogged()</summary>
+        </member>
+        <member name="T:MQ163.Application.Facade.Fakes.ShimFacebookFacade">
+            <summary>Shim type of MQ163.Application.Facade.FacebookFacade</summary>
+        </member>
+        <member name="M:MQ163.Application.Facade.Fakes.ShimFacebookFacade.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MQ163.Application.Facade.Fakes.ShimFacebookFacade.#ctor(MQ163.Application.Facade.FacebookFacade)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:MQ163.Application.Facade.Fakes.ShimFacebookFacade.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163.Application.Facade.Fakes.ShimFacebookFacade.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163.Application.Facade.Fakes.ShimFacebookFacade.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:MQ163.Application.Facade.Fakes.ShimFacebookFacade.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163.Application.Facade.Fakes.ShimFacebookFacade.Constructor">
+            <summary>Sets the shim of FacebookFacade.FacebookFacade()</summary>
+        </member>
+        <member name="P:MQ163.Application.Facade.Fakes.ShimFacebookFacade.ConstructorIFacebookPage">
+            <summary>Sets the shim of FacebookFacade.FacebookFacade(IFacebookPage page)</summary>
+        </member>
+        <member name="P:MQ163.Application.Facade.Fakes.ShimFacebookFacade.Dispose">
+            <summary>Sets the shim of FacebookFacade.Dispose()</summary>
+        </member>
+        <member name="P:MQ163.Application.Facade.Fakes.ShimFacebookFacade.GetAllCommentsForPostString">
+            <summary>Sets the shim of FacebookFacade.GetAllCommentsForPost(String postID)</summary>
+        </member>
+        <member name="P:MQ163.Application.Facade.Fakes.ShimFacebookFacade.GetAllLikesForPostString">
+            <summary>Sets the shim of FacebookFacade.GetAllLikesForPost(String postID)</summary>
+        </member>
+        <member name="P:MQ163.Application.Facade.Fakes.ShimFacebookFacade.GetAllPosts">
+            <summary>Sets the shim of FacebookFacade.GetAllPosts()</summary>
+        </member>
+        <member name="P:MQ163.Application.Facade.Fakes.ShimFacebookFacade.PostPictureMesssageStringStringString">
+            <summary>Sets the shim of FacebookFacade.PostPictureMesssage(String message, String picUrl, String taggedUserEmail)</summary>
+        </member>
+        <member name="T:MQ163.Application.Facade.Fakes.ShimFacebookFacade.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:MQ163.Application.Facade.Fakes.ShimFacebookFacade.AllInstances.Dispose">
+            <summary>Sets the shim of FacebookFacade.Dispose()</summary>
+        </member>
+        <member name="P:MQ163.Application.Facade.Fakes.ShimFacebookFacade.AllInstances.GetAllCommentsForPostString">
+            <summary>Sets the shim of FacebookFacade.GetAllCommentsForPost(String postID)</summary>
+        </member>
+        <member name="P:MQ163.Application.Facade.Fakes.ShimFacebookFacade.AllInstances.GetAllLikesForPostString">
+            <summary>Sets the shim of FacebookFacade.GetAllLikesForPost(String postID)</summary>
+        </member>
+        <member name="P:MQ163.Application.Facade.Fakes.ShimFacebookFacade.AllInstances.GetAllPosts">
+            <summary>Sets the shim of FacebookFacade.GetAllPosts()</summary>
+        </member>
+        <member name="P:MQ163.Application.Facade.Fakes.ShimFacebookFacade.AllInstances.PostPictureMesssageStringStringString">
+            <summary>Sets the shim of FacebookFacade.PostPictureMesssage(String message, String picUrl, String taggedUserEmail)</summary>
+        </member>
+        <member name="T:MQ163.Application.Facade.Fakes.StubFacebookFacade">
+            <summary>Stub type of MQ163.Application.Facade.FacebookFacade</summary>
+        </member>
+        <member name="M:MQ163.Application.Facade.Fakes.StubFacebookFacade.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MQ163.Application.Facade.Fakes.StubFacebookFacade.#ctor(MQ163.External.Facebook.IFacebookPage)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MQ163.Application.Facade.Fakes.StubFacebookFacade.InitializeStub">
+            <summary>Initializes a new instance of type StubFacebookFacade</summary>
+        </member>
+        <member name="P:MQ163.Application.Facade.Fakes.StubFacebookFacade.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MQ163.Application.Facade.Fakes.StubFacebookFacade.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:MQ163.Application.Facade.Fakes.StubFacebookFacade.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:MQ163.External.Facebook.Fakes.ShimFacebookComment">
+            <summary>Shim type of MQ163.External.Facebook.FacebookComment</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.ShimFacebookComment.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.ShimFacebookComment.#ctor(MQ163.External.Facebook.FacebookComment)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.ShimFacebookComment.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.ShimFacebookComment.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.CommentTextGet">
+            <summary>Sets the shim of FacebookComment.get_CommentText()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.CommentTextSetString">
+            <summary>Sets the shim of FacebookComment.set_CommentText(String value)</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.Constructor">
+            <summary>Sets the shim of FacebookComment.FacebookComment()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.CreatedDateAndTimeGet">
+            <summary>Sets the shim of FacebookComment.get_CreatedDateAndTime()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.CreatedDateAndTimeSetDateTime">
+            <summary>Sets the shim of FacebookComment.set_CreatedDateAndTime(DateTime value)</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.IdGet">
+            <summary>Sets the shim of FacebookComment.get_Id()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.IdSetString">
+            <summary>Sets the shim of FacebookComment.set_Id(String value)</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.IsSupportiveGet">
+            <summary>Sets the shim of FacebookComment.get_IsSupportive()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.IsSupportiveSetNullableOfBoolean">
+            <summary>Sets the shim of FacebookComment.set_IsSupportive(Nullable`1&lt;Boolean&gt; value)</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.UserGet">
+            <summary>Sets the shim of FacebookComment.get_User()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.UserSetIFacebookProfile">
+            <summary>Sets the shim of FacebookComment.set_User(IFacebookProfile value)</summary>
+        </member>
+        <member name="T:MQ163.External.Facebook.Fakes.ShimFacebookComment.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.AllInstances.CommentTextGet">
+            <summary>Sets the shim of FacebookComment.get_CommentText()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.AllInstances.CommentTextSetString">
+            <summary>Sets the shim of FacebookComment.set_CommentText(String value)</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.AllInstances.CreatedDateAndTimeGet">
+            <summary>Sets the shim of FacebookComment.get_CreatedDateAndTime()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.AllInstances.CreatedDateAndTimeSetDateTime">
+            <summary>Sets the shim of FacebookComment.set_CreatedDateAndTime(DateTime value)</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.AllInstances.IdGet">
+            <summary>Sets the shim of FacebookComment.get_Id()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.AllInstances.IdSetString">
+            <summary>Sets the shim of FacebookComment.set_Id(String value)</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.AllInstances.IsSupportiveGet">
+            <summary>Sets the shim of FacebookComment.get_IsSupportive()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.AllInstances.IsSupportiveSetNullableOfBoolean">
+            <summary>Sets the shim of FacebookComment.set_IsSupportive(Nullable`1&lt;Boolean&gt; value)</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.AllInstances.UserGet">
+            <summary>Sets the shim of FacebookComment.get_User()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.AllInstances.UserSetIFacebookProfile">
+            <summary>Sets the shim of FacebookComment.set_User(IFacebookProfile value)</summary>
+        </member>
+        <member name="T:MQ163.External.Facebook.Fakes.StubFacebookComment">
+            <summary>Stub type of MQ163.External.Facebook.FacebookComment</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubFacebookComment.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubFacebookComment.InitializeStub">
+            <summary>Initializes a new instance of type StubFacebookComment</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.StubFacebookComment.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.StubFacebookComment.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.StubFacebookComment.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:MQ163.External.Facebook.Fakes.StubIFacebookPage">
+            <summary>Stub type of MQ163.External.Facebook.IFacebookPage</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookPage.#ctor">
+            <summary>Initializes a new instance of type StubIFacebookPage</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPage.AddPostIFacebookPostData">
+            <summary>Sets the stub of IFacebookPage.AddPost(IFacebookPostData postObject)</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPage.Dispose">
+            <summary>Sets the stub of IDisposable.Dispose()</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPage.GetAllCommentsForPostString">
+            <summary>Sets the stub of IFacebookPage.GetAllCommentsForPost(String postID)</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPage.GetAllLikesForPostString">
+            <summary>Sets the stub of IFacebookPage.GetAllLikesForPost(String postID)</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPage.GetAllPosts">
+            <summary>Sets the stub of IFacebookPage.GetAllPosts()</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookPage.mq163s::MQ163#External#Facebook#IFacebookPage#AddPost(MQ163.External.Facebook.IFacebookPostData)">
+            <summary>Sets the stub of IFacebookPage.AddPost(IFacebookPostData postObject)</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookPage.mq163s::MQ163#External#Facebook#IFacebookPage#GetAllCommentsForPost(System.String)">
+            <summary>Sets the stub of IFacebookPage.GetAllCommentsForPost(String postID)</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookPage.mq163s::MQ163#External#Facebook#IFacebookPage#GetAllLikesForPost(System.String)">
+            <summary>Sets the stub of IFacebookPage.GetAllLikesForPost(String postID)</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookPage.mq163s::MQ163#External#Facebook#IFacebookPage#GetAllPosts">
+            <summary>Sets the stub of IFacebookPage.GetAllPosts()</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookPage.global::System#IDisposable#Dispose">
+            <summary>Sets the stub of IDisposable.Dispose()</summary>
+        </member>
+        <member name="T:MQ163.External.Facebook.Fakes.StubIFacebookPost">
+            <summary>Stub type of MQ163.External.Facebook.IFacebookPost</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookPost.#ctor">
+            <summary>Initializes a new instance of type StubIFacebookPost</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookPost.AttachBackingFieldToCommentCount">
+            <summary>Attaches delegates to emulate StubIFacebookPost.CommentCount as a property with a backing field.</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookPost.AttachBackingFieldToComments">
+            <summary>Attaches delegates to emulate StubIFacebookPost.Comments as a property with a backing field.</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookPost.AttachBackingFieldToId">
+            <summary>Attaches delegates to emulate StubIFacebookPost.Id as a property with a backing field.</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookPost.AttachBackingFieldToLikeCount">
+            <summary>Attaches delegates to emulate StubIFacebookPost.LikeCount as a property with a backing field.</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookPost.AttachBackingFieldToLikes">
+            <summary>Attaches delegates to emulate StubIFacebookPost.Likes as a property with a backing field.</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookPost.AttachBackingFieldToPostPicture">
+            <summary>Attaches delegates to emulate StubIFacebookPost.PostPicture as a property with a backing field.</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookPost.AttachBackingFieldToPostText">
+            <summary>Attaches delegates to emulate StubIFacebookPost.PostText as a property with a backing field.</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookPost.AttachBackingFieldToReposts">
+            <summary>Attaches delegates to emulate StubIFacebookPost.Reposts as a property with a backing field.</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookPost.AttachBackingFieldToTags">
+            <summary>Attaches delegates to emulate StubIFacebookPost.Tags as a property with a backing field.</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPost.CommentCountGet">
+            <summary>Sets the stub of IFacebookPost.get_CommentCount()</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPost.CommentCountSetInt32">
+            <summary>Sets the stub of IFacebookPost.set_CommentCount(Int32 value)</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPost.CommentsGet">
+            <summary>Sets the stub of IFacebookPost.get_Comments()</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPost.CommentsSetIEnumerableOfFacebookComment">
+            <summary>Sets the stub of IFacebookPost.set_Comments(IEnumerable`1&lt;FacebookComment&gt; value)</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPost.IdGet">
+            <summary>Sets the stub of IFacebookPost.get_Id()</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPost.IdSetString">
+            <summary>Sets the stub of IFacebookPost.set_Id(String value)</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPost.LikeCountGet">
+            <summary>Sets the stub of IFacebookPost.get_LikeCount()</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPost.LikeCountSetInt32">
+            <summary>Sets the stub of IFacebookPost.set_LikeCount(Int32 value)</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPost.LikesGet">
+            <summary>Sets the stub of IFacebookPost.get_Likes()</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPost.LikesSetIEnumerableOfIFacebookProfile">
+            <summary>Sets the stub of IFacebookPost.set_Likes(IEnumerable`1&lt;IFacebookProfile&gt; value)</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPost.PostPictureGet">
+            <summary>Sets the stub of IFacebookPost.get_PostPicture()</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPost.PostPictureSetString">
+            <summary>Sets the stub of IFacebookPost.set_PostPicture(String value)</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPost.PostTextGet">
+            <summary>Sets the stub of IFacebookPost.get_PostText()</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPost.PostTextSetString">
+            <summary>Sets the stub of IFacebookPost.set_PostText(String value)</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPost.RepostsGet">
+            <summary>Sets the stub of IFacebookPost.get_Reposts()</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPost.RepostsSetIEnumerableOfIFacebookProfile">
+            <summary>Sets the stub of IFacebookPost.set_Reposts(IEnumerable`1&lt;IFacebookProfile&gt; value)</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPost.TagsGet">
+            <summary>Sets the stub of IFacebookPost.get_Tags()</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPost.TagsSetIEnumerableOfIFacebookProfile">
+            <summary>Sets the stub of IFacebookPost.set_Tags(IEnumerable`1&lt;IFacebookProfile&gt; value)</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.StubIFacebookPost.mq163s::MQ163#External#Facebook#IFacebookPost#CommentCount">
+            <summary>Sets the stub of IFacebookPost.get_CommentCount()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.StubIFacebookPost.mq163s::MQ163#External#Facebook#IFacebookPost#Comments">
+            <summary>Sets the stub of IFacebookPost.get_Comments()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.StubIFacebookPost.mq163s::MQ163#External#Facebook#IFacebookPost#Id">
+            <summary>Sets the stub of IFacebookPost.get_Id()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.StubIFacebookPost.mq163s::MQ163#External#Facebook#IFacebookPost#LikeCount">
+            <summary>Sets the stub of IFacebookPost.get_LikeCount()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.StubIFacebookPost.mq163s::MQ163#External#Facebook#IFacebookPost#Likes">
+            <summary>Sets the stub of IFacebookPost.get_Likes()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.StubIFacebookPost.mq163s::MQ163#External#Facebook#IFacebookPost#PostPicture">
+            <summary>Sets the stub of IFacebookPost.get_PostPicture()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.StubIFacebookPost.mq163s::MQ163#External#Facebook#IFacebookPost#PostText">
+            <summary>Sets the stub of IFacebookPost.get_PostText()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.StubIFacebookPost.mq163s::MQ163#External#Facebook#IFacebookPost#Reposts">
+            <summary>Sets the stub of IFacebookPost.get_Reposts()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.StubIFacebookPost.mq163s::MQ163#External#Facebook#IFacebookPost#Tags">
+            <summary>Sets the stub of IFacebookPost.get_Tags()</summary>
+        </member>
+        <member name="T:MQ163.External.Facebook.Fakes.StubIFacebookPostData">
+            <summary>Stub type of MQ163.External.Facebook.IFacebookPostData</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookPostData.#ctor">
+            <summary>Initializes a new instance of type StubIFacebookPostData</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPostData.AccessTokenGet">
+            <summary>Sets the stub of IFacebookPostData.get_AccessToken()</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPostData.AccessTokenSetString">
+            <summary>Sets the stub of IFacebookPostData.set_AccessToken(String value)</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookPostData.AttachBackingFieldToAccessToken">
+            <summary>Attaches delegates to emulate StubIFacebookPostData.AccessToken as a property with a backing field.</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookPostData.AttachBackingFieldToMessage">
+            <summary>Attaches delegates to emulate StubIFacebookPostData.Message as a property with a backing field.</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookPostData.AttachBackingFieldToPictureUrl">
+            <summary>Attaches delegates to emulate StubIFacebookPostData.PictureUrl as a property with a backing field.</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookPostData.AttachBackingFieldToTaggedUserEmail">
+            <summary>Attaches delegates to emulate StubIFacebookPostData.TaggedUserEmail as a property with a backing field.</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPostData.GetPostObject">
+            <summary>Sets the stub of IFacebookPostData.GetPostObject()</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookPostData.mq163s::MQ163#External#Facebook#IFacebookPostData#GetPostObject">
+            <summary>Sets the stub of IFacebookPostData.GetPostObject()</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPostData.MessageGet">
+            <summary>Sets the stub of IFacebookPostData.get_Message()</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPostData.MessageSetString">
+            <summary>Sets the stub of IFacebookPostData.set_Message(String value)</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPostData.PictureUrlGet">
+            <summary>Sets the stub of IFacebookPostData.get_PictureUrl()</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPostData.PictureUrlSetString">
+            <summary>Sets the stub of IFacebookPostData.set_PictureUrl(String value)</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPostData.TaggedUserEmailGet">
+            <summary>Sets the stub of IFacebookPostData.get_TaggedUserEmail()</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookPostData.TaggedUserEmailSetString">
+            <summary>Sets the stub of IFacebookPostData.set_TaggedUserEmail(String value)</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.StubIFacebookPostData.mq163s::MQ163#External#Facebook#IFacebookPostData#AccessToken">
+            <summary>Sets the stub of IFacebookPostData.get_AccessToken()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.StubIFacebookPostData.mq163s::MQ163#External#Facebook#IFacebookPostData#Message">
+            <summary>Sets the stub of IFacebookPostData.get_Message()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.StubIFacebookPostData.mq163s::MQ163#External#Facebook#IFacebookPostData#PictureUrl">
+            <summary>Sets the stub of IFacebookPostData.get_PictureUrl()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.StubIFacebookPostData.mq163s::MQ163#External#Facebook#IFacebookPostData#TaggedUserEmail">
+            <summary>Sets the stub of IFacebookPostData.get_TaggedUserEmail()</summary>
+        </member>
+        <member name="T:MQ163.External.Facebook.Fakes.StubIFacebookProfile">
+            <summary>Stub type of MQ163.External.Facebook.IFacebookProfile</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookProfile.#ctor">
+            <summary>Initializes a new instance of type StubIFacebookProfile</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookProfile.AttachBackingFieldToFirstName">
+            <summary>Attaches delegates to emulate StubIFacebookProfile.FirstName as a property with a backing field.</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookProfile.AttachBackingFieldToId">
+            <summary>Attaches delegates to emulate StubIFacebookProfile.Id as a property with a backing field.</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookProfile.AttachBackingFieldToLastName">
+            <summary>Attaches delegates to emulate StubIFacebookProfile.LastName as a property with a backing field.</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookProfile.AttachBackingFieldToProfilePicture">
+            <summary>Attaches delegates to emulate StubIFacebookProfile.ProfilePicture as a property with a backing field.</summary>
+        </member>
+        <member name="M:MQ163.External.Facebook.Fakes.StubIFacebookProfile.AttachBackingFieldToUserName">
+            <summary>Attaches delegates to emulate StubIFacebookProfile.UserName as a property with a backing field.</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookProfile.FirstNameGet">
+            <summary>Sets the stub of IFacebookProfile.get_FirstName()</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookProfile.FirstNameSetString">
+            <summary>Sets the stub of IFacebookProfile.set_FirstName(String value)</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookProfile.IdGet">
+            <summary>Sets the stub of IFacebookProfile.get_Id()</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookProfile.IdSetString">
+            <summary>Sets the stub of IFacebookProfile.set_Id(String value)</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookProfile.LastNameGet">
+            <summary>Sets the stub of IFacebookProfile.get_LastName()</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookProfile.LastNameSetString">
+            <summary>Sets the stub of IFacebookProfile.set_LastName(String value)</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookProfile.ProfilePictureGet">
+            <summary>Sets the stub of IFacebookProfile.get_ProfilePicture()</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookProfile.ProfilePictureSetString">
+            <summary>Sets the stub of IFacebookProfile.set_ProfilePicture(String value)</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookProfile.UserNameGet">
+            <summary>Sets the stub of IFacebookProfile.get_UserName()</summary>
+        </member>
+        <member name="F:MQ163.External.Facebook.Fakes.StubIFacebookProfile.UserNameSetString">
+            <summary>Sets the stub of IFacebookProfile.set_UserName(String value)</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.StubIFacebookProfile.mq163s::MQ163#External#Facebook#IFacebookProfile#FirstName">
+            <summary>Sets the stub of IFacebookProfile.get_FirstName()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.StubIFacebookProfile.mq163s::MQ163#External#Facebook#IFacebookProfile#Id">
+            <summary>Sets the stub of IFacebookProfile.get_Id()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.StubIFacebookProfile.mq163s::MQ163#External#Facebook#IFacebookProfile#LastName">
+            <summary>Sets the stub of IFacebookProfile.get_LastName()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.StubIFacebookProfile.mq163s::MQ163#External#Facebook#IFacebookProfile#ProfilePicture">
+            <summary>Sets the stub of IFacebookProfile.get_ProfilePicture()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.StubIFacebookProfile.mq163s::MQ163#External#Facebook#IFacebookProfile#UserName">
+            <summary>Sets the stub of IFacebookProfile.get_UserName()</summary>
+        </member>
+        <member name="T:MQ163Service.Controllers.Fakes.ShimFacebookController">
+            <summary>Shim type of MQ163Service.Controllers.FacebookController</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimFacebookController.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimFacebookController.#ctor(MQ163Service.Controllers.FacebookController)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimFacebookController.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimFacebookController.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimFacebookController.Bind(System.Web.Http.Controllers.IHttpController)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimFacebookController.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimFacebookController.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimFacebookController.Constructor">
+            <summary>Sets the shim of FacebookController.FacebookController()</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimFacebookController.Get">
+            <summary>Sets the shim of FacebookController.Get()</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimFacebookController.GetCommentsString">
+            <summary>Sets the shim of FacebookController.GetComments(String postId)</summary>
+        </member>
+        <member name="T:MQ163Service.Controllers.Fakes.ShimFacebookController.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimFacebookController.AllInstances.Get">
+            <summary>Sets the shim of FacebookController.Get()</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimFacebookController.AllInstances.GetCommentsString">
+            <summary>Sets the shim of FacebookController.GetComments(String postId)</summary>
+        </member>
+        <member name="T:MQ163Service.Controllers.Fakes.ShimHomeController">
+            <summary>Shim type of MQ163Service.Controllers.HomeController</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimHomeController.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimHomeController.#ctor(MQ163Service.Controllers.HomeController)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimHomeController.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimHomeController.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimHomeController.Bind(System.Web.Mvc.IActionFilter)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimHomeController.Bind(System.Web.Mvc.IAuthorizationFilter)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimHomeController.Bind(System.Web.Mvc.IController)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimHomeController.Bind(System.Web.Mvc.IExceptionFilter)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimHomeController.Bind(System.Web.Mvc.IResultFilter)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimHomeController.Bind(System.Web.Mvc.Async.IAsyncController)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimHomeController.Bind(System.Web.Mvc.Async.IAsyncManagerContainer)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimHomeController.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimHomeController.AddPost">
+            <summary>Sets the shim of HomeController.AddPost()</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimHomeController.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimHomeController.Constructor">
+            <summary>Sets the shim of HomeController.HomeController()</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimHomeController.Index">
+            <summary>Sets the shim of HomeController.Index()</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimHomeController.Post">
+            <summary>Sets the shim of HomeController.Post()</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimHomeController.Success">
+            <summary>Sets the shim of HomeController.Success()</summary>
+        </member>
+        <member name="T:MQ163Service.Controllers.Fakes.ShimHomeController.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimHomeController.AllInstances.AddPost">
+            <summary>Sets the shim of HomeController.AddPost()</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimHomeController.AllInstances.Index">
+            <summary>Sets the shim of HomeController.Index()</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimHomeController.AllInstances.Post">
+            <summary>Sets the shim of HomeController.Post()</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimHomeController.AllInstances.Success">
+            <summary>Sets the shim of HomeController.Success()</summary>
+        </member>
+        <member name="T:MQ163Service.Controllers.Fakes.ShimMerchandizeController">
+            <summary>Shim type of MQ163Service.Controllers.MerchandizeController</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimMerchandizeController.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimMerchandizeController.#ctor(MQ163Service.Controllers.MerchandizeController)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimMerchandizeController.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimMerchandizeController.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimMerchandizeController.Bind(System.Web.Http.Controllers.IHttpController)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimMerchandizeController.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimMerchandizeController.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimMerchandizeController.Constructor">
+            <summary>Sets the shim of MerchandizeController.MerchandizeController()</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimMerchandizeController.Get">
+            <summary>Sets the shim of MerchandizeController.Get()</summary>
+        </member>
+        <member name="T:MQ163Service.Controllers.Fakes.ShimMerchandizeController.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimMerchandizeController.AllInstances.Get">
+            <summary>Sets the shim of MerchandizeController.Get()</summary>
+        </member>
+        <member name="T:MQ163Service.Controllers.Fakes.ShimProspectsController">
+            <summary>Shim type of MQ163Service.Controllers.ProspectsController</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimProspectsController.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimProspectsController.#ctor(MQ163Service.Controllers.ProspectsController)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimProspectsController.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimProspectsController.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimProspectsController.Bind(System.Web.Http.Controllers.IHttpController)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimProspectsController.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimProspectsController.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimProspectsController.Constructor">
+            <summary>Sets the shim of ProspectsController.ProspectsController()</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimProspectsController.GetBoolean">
+            <summary>Sets the shim of ProspectsController.Get(Boolean isCustomer)</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimProspectsController.getProspectsJsonBoolean">
+            <summary>Sets the shim of ProspectsController.getProspectsJson(Boolean isCustomer)</summary>
+        </member>
+        <member name="T:MQ163Service.Controllers.Fakes.ShimProspectsController.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimProspectsController.AllInstances.GetBoolean">
+            <summary>Sets the shim of ProspectsController.Get(Boolean isCustomer)</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimProspectsController.AllInstances.getProspectsJsonBoolean">
+            <summary>Sets the shim of ProspectsController.getProspectsJson(Boolean isCustomer)</summary>
+        </member>
+        <member name="T:MQ163Service.Controllers.Fakes.ShimSocialIntegratorController">
+            <summary>Shim type of MQ163Service.Controllers.SocialIntegratorController</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimSocialIntegratorController.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimSocialIntegratorController.#ctor(MQ163Service.Controllers.SocialIntegratorController)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimSocialIntegratorController.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimSocialIntegratorController.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimSocialIntegratorController.Bind(System.Web.Http.Controllers.IHttpController)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.ShimSocialIntegratorController.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimSocialIntegratorController.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimSocialIntegratorController.Constructor">
+            <summary>Sets the shim of SocialIntegratorController.SocialIntegratorController()</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimSocialIntegratorController.PostFormData">
+            <summary>Sets the shim of SocialIntegratorController.PostFormData()</summary>
+        </member>
+        <member name="T:MQ163Service.Controllers.Fakes.ShimSocialIntegratorController.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimSocialIntegratorController.AllInstances.PostFormData">
+            <summary>Sets the shim of SocialIntegratorController.PostFormData()</summary>
+        </member>
+        <member name="T:MQ163Service.Controllers.Fakes.StubFacebookController">
+            <summary>Stub type of MQ163Service.Controllers.FacebookController</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubFacebookController.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubFacebookController.Dispose(System.Boolean)">
+            <summary>Sets the stub of ApiController.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubFacebookController.DisposeBoolean">
+            <summary>Sets the stub of ApiController.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubFacebookController.ExecuteAsync(System.Web.Http.Controllers.HttpControllerContext,System.Threading.CancellationToken)">
+            <summary>Sets the stub of ApiController.ExecuteAsync(HttpControllerContext controllerContext, CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubFacebookController.ExecuteAsyncHttpControllerContextCancellationToken">
+            <summary>Sets the stub of ApiController.ExecuteAsync(HttpControllerContext controllerContext, CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubFacebookController.Initialize(System.Web.Http.Controllers.HttpControllerContext)">
+            <summary>Sets the stub of ApiController.Initialize(HttpControllerContext controllerContext)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubFacebookController.InitializeHttpControllerContext">
+            <summary>Sets the stub of ApiController.Initialize(HttpControllerContext controllerContext)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubFacebookController.InitializeStub">
+            <summary>Initializes a new instance of type StubFacebookController</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.StubFacebookController.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.StubFacebookController.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.StubFacebookController.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:MQ163Service.Controllers.Fakes.StubHomeController">
+            <summary>Stub type of MQ163Service.Controllers.HomeController</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.BeginExecute(System.Web.Routing.RequestContext,System.AsyncCallback,System.Object)">
+            <summary>Sets the stub of Controller.BeginExecute(RequestContext requestContext, AsyncCallback callback, Object state)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.BeginExecuteCore(System.AsyncCallback,System.Object)">
+            <summary>Sets the stub of Controller.BeginExecuteCore(AsyncCallback callback, Object state)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.BeginExecuteCoreAsyncCallbackObject">
+            <summary>Sets the stub of Controller.BeginExecuteCore(AsyncCallback callback, Object state)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.BeginExecuteRequestContextAsyncCallbackObject">
+            <summary>Sets the stub of Controller.BeginExecute(RequestContext requestContext, AsyncCallback callback, Object state)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.Content(System.String,System.String,System.Text.Encoding)">
+            <summary>Sets the stub of Controller.Content(String content, String contentType, Encoding contentEncoding)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.ContentStringStringEncoding">
+            <summary>Sets the stub of Controller.Content(String content, String contentType, Encoding contentEncoding)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.CreateActionInvoker">
+            <summary>Sets the stub of Controller.CreateActionInvoker()</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.CreateActionInvoker01">
+            <summary>Sets the stub of Controller.CreateActionInvoker()</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.CreateTempDataProvider">
+            <summary>Sets the stub of Controller.CreateTempDataProvider()</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.CreateTempDataProvider01">
+            <summary>Sets the stub of Controller.CreateTempDataProvider()</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.DisableAsyncSupportGet">
+            <summary>Sets the stub of Controller.get_DisableAsyncSupport()</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.Dispose(System.Boolean)">
+            <summary>Sets the stub of Controller.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.DisposeBoolean">
+            <summary>Sets the stub of Controller.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.EndExecute(System.IAsyncResult)">
+            <summary>Sets the stub of Controller.EndExecute(IAsyncResult asyncResult)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.EndExecuteCore(System.IAsyncResult)">
+            <summary>Sets the stub of Controller.EndExecuteCore(IAsyncResult asyncResult)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.EndExecuteCoreIAsyncResult">
+            <summary>Sets the stub of Controller.EndExecuteCore(IAsyncResult asyncResult)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.EndExecuteIAsyncResult">
+            <summary>Sets the stub of Controller.EndExecute(IAsyncResult asyncResult)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.Execute(System.Web.Routing.RequestContext)">
+            <summary>Sets the stub of ControllerBase.Execute(RequestContext requestContext)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.ExecuteCore">
+            <summary>Sets the stub of Controller.ExecuteCore()</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.ExecuteCore01">
+            <summary>Sets the stub of Controller.ExecuteCore()</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.ExecuteRequestContext">
+            <summary>Sets the stub of ControllerBase.Execute(RequestContext requestContext)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.File(System.Byte[],System.String,System.String)">
+            <summary>Sets the stub of Controller.File(Byte[] fileContents, String contentType, String fileDownloadName)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.File(System.String,System.String,System.String)">
+            <summary>Sets the stub of Controller.File(String fileName, String contentType, String fileDownloadName)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.File(System.IO.Stream,System.String,System.String)">
+            <summary>Sets the stub of Controller.File(Stream fileStream, String contentType, String fileDownloadName)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.FileByteArrayStringString">
+            <summary>Sets the stub of Controller.File(Byte[] fileContents, String contentType, String fileDownloadName)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.FileStreamStringString">
+            <summary>Sets the stub of Controller.File(Stream fileStream, String contentType, String fileDownloadName)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.FileStringStringString">
+            <summary>Sets the stub of Controller.File(String fileName, String contentType, String fileDownloadName)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.HandleUnknownAction(System.String)">
+            <summary>Sets the stub of Controller.HandleUnknownAction(String actionName)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.HandleUnknownActionString">
+            <summary>Sets the stub of Controller.HandleUnknownAction(String actionName)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.HttpNotFound(System.String)">
+            <summary>Sets the stub of Controller.HttpNotFound(String statusDescription)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.HttpNotFoundString">
+            <summary>Sets the stub of Controller.HttpNotFound(String statusDescription)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.Initialize(System.Web.Routing.RequestContext)">
+            <summary>Sets the stub of Controller.Initialize(RequestContext requestContext)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.InitializeRequestContext">
+            <summary>Sets the stub of Controller.Initialize(RequestContext requestContext)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.InitializeStub">
+            <summary>Initializes a new instance of type StubHomeController</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.JavaScript(System.String)">
+            <summary>Sets the stub of Controller.JavaScript(String script)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.JavaScriptString">
+            <summary>Sets the stub of Controller.JavaScript(String script)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.Json(System.Object,System.String,System.Text.Encoding)">
+            <summary>Sets the stub of Controller.Json(Object data, String contentType, Encoding contentEncoding)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.Json(System.Object,System.String,System.Text.Encoding,System.Web.Mvc.JsonRequestBehavior)">
+            <summary>Sets the stub of Controller.Json(Object data, String contentType, Encoding contentEncoding, JsonRequestBehavior behavior)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.JsonObjectStringEncoding">
+            <summary>Sets the stub of Controller.Json(Object data, String contentType, Encoding contentEncoding)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.JsonObjectStringEncodingJsonRequestBehavior">
+            <summary>Sets the stub of Controller.Json(Object data, String contentType, Encoding contentEncoding, JsonRequestBehavior behavior)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.OnActionExecuted(System.Web.Mvc.ActionExecutedContext)">
+            <summary>Sets the stub of Controller.OnActionExecuted(ActionExecutedContext filterContext)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.OnActionExecutedActionExecutedContext">
+            <summary>Sets the stub of Controller.OnActionExecuted(ActionExecutedContext filterContext)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)">
+            <summary>Sets the stub of Controller.OnActionExecuting(ActionExecutingContext filterContext)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.OnActionExecutingActionExecutingContext">
+            <summary>Sets the stub of Controller.OnActionExecuting(ActionExecutingContext filterContext)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.OnAuthorization(System.Web.Mvc.AuthorizationContext)">
+            <summary>Sets the stub of Controller.OnAuthorization(AuthorizationContext filterContext)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.OnAuthorizationAuthorizationContext">
+            <summary>Sets the stub of Controller.OnAuthorization(AuthorizationContext filterContext)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.OnException(System.Web.Mvc.ExceptionContext)">
+            <summary>Sets the stub of Controller.OnException(ExceptionContext filterContext)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.OnExceptionExceptionContext">
+            <summary>Sets the stub of Controller.OnException(ExceptionContext filterContext)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.OnResultExecuted(System.Web.Mvc.ResultExecutedContext)">
+            <summary>Sets the stub of Controller.OnResultExecuted(ResultExecutedContext filterContext)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.OnResultExecutedResultExecutedContext">
+            <summary>Sets the stub of Controller.OnResultExecuted(ResultExecutedContext filterContext)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.OnResultExecuting(System.Web.Mvc.ResultExecutingContext)">
+            <summary>Sets the stub of Controller.OnResultExecuting(ResultExecutingContext filterContext)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.OnResultExecutingResultExecutingContext">
+            <summary>Sets the stub of Controller.OnResultExecuting(ResultExecutingContext filterContext)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.PartialView(System.String,System.Object)">
+            <summary>Sets the stub of Controller.PartialView(String viewName, Object model)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.PartialViewStringObject">
+            <summary>Sets the stub of Controller.PartialView(String viewName, Object model)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.Redirect(System.String)">
+            <summary>Sets the stub of Controller.Redirect(String url)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.RedirectPermanent(System.String)">
+            <summary>Sets the stub of Controller.RedirectPermanent(String url)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.RedirectPermanentString">
+            <summary>Sets the stub of Controller.RedirectPermanent(String url)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.RedirectString">
+            <summary>Sets the stub of Controller.Redirect(String url)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.RedirectToAction(System.String,System.String,System.Web.Routing.RouteValueDictionary)">
+            <summary>Sets the stub of Controller.RedirectToAction(String actionName, String controllerName, RouteValueDictionary routeValues)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.RedirectToActionPermanent(System.String,System.String,System.Web.Routing.RouteValueDictionary)">
+            <summary>Sets the stub of Controller.RedirectToActionPermanent(String actionName, String controllerName, RouteValueDictionary routeValues)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.RedirectToActionPermanentStringStringRouteValueDictionary">
+            <summary>Sets the stub of Controller.RedirectToActionPermanent(String actionName, String controllerName, RouteValueDictionary routeValues)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.RedirectToActionStringStringRouteValueDictionary">
+            <summary>Sets the stub of Controller.RedirectToAction(String actionName, String controllerName, RouteValueDictionary routeValues)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.RedirectToRoute(System.String,System.Web.Routing.RouteValueDictionary)">
+            <summary>Sets the stub of Controller.RedirectToRoute(String routeName, RouteValueDictionary routeValues)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.RedirectToRoutePermanent(System.String,System.Web.Routing.RouteValueDictionary)">
+            <summary>Sets the stub of Controller.RedirectToRoutePermanent(String routeName, RouteValueDictionary routeValues)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.RedirectToRoutePermanentStringRouteValueDictionary">
+            <summary>Sets the stub of Controller.RedirectToRoutePermanent(String routeName, RouteValueDictionary routeValues)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.RedirectToRouteStringRouteValueDictionary">
+            <summary>Sets the stub of Controller.RedirectToRoute(String routeName, RouteValueDictionary routeValues)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.View(System.Web.Mvc.IView,System.Object)">
+            <summary>Sets the stub of Controller.View(IView view, Object model)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubHomeController.View(System.String,System.String,System.Object)">
+            <summary>Sets the stub of Controller.View(String viewName, String masterName, Object model)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.ViewIViewObject">
+            <summary>Sets the stub of Controller.View(IView view, Object model)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubHomeController.ViewStringStringObject">
+            <summary>Sets the stub of Controller.View(String viewName, String masterName, Object model)</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.StubHomeController.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.StubHomeController.DisableAsyncSupport">
+            <summary>Sets the stub of Controller.get_DisableAsyncSupport()</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.StubHomeController.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.StubHomeController.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:MQ163Service.Controllers.Fakes.StubMerchandizeController">
+            <summary>Stub type of MQ163Service.Controllers.MerchandizeController</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubMerchandizeController.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubMerchandizeController.Dispose(System.Boolean)">
+            <summary>Sets the stub of ApiController.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubMerchandizeController.DisposeBoolean">
+            <summary>Sets the stub of ApiController.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubMerchandizeController.ExecuteAsync(System.Web.Http.Controllers.HttpControllerContext,System.Threading.CancellationToken)">
+            <summary>Sets the stub of ApiController.ExecuteAsync(HttpControllerContext controllerContext, CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubMerchandizeController.ExecuteAsyncHttpControllerContextCancellationToken">
+            <summary>Sets the stub of ApiController.ExecuteAsync(HttpControllerContext controllerContext, CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubMerchandizeController.Initialize(System.Web.Http.Controllers.HttpControllerContext)">
+            <summary>Sets the stub of ApiController.Initialize(HttpControllerContext controllerContext)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubMerchandizeController.InitializeHttpControllerContext">
+            <summary>Sets the stub of ApiController.Initialize(HttpControllerContext controllerContext)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubMerchandizeController.InitializeStub">
+            <summary>Initializes a new instance of type StubMerchandizeController</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.StubMerchandizeController.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.StubMerchandizeController.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.StubMerchandizeController.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:MQ163Service.Controllers.Fakes.StubProspectsController">
+            <summary>Stub type of MQ163Service.Controllers.ProspectsController</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubProspectsController.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubProspectsController.Dispose(System.Boolean)">
+            <summary>Sets the stub of ApiController.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubProspectsController.DisposeBoolean">
+            <summary>Sets the stub of ApiController.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubProspectsController.ExecuteAsync(System.Web.Http.Controllers.HttpControllerContext,System.Threading.CancellationToken)">
+            <summary>Sets the stub of ApiController.ExecuteAsync(HttpControllerContext controllerContext, CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubProspectsController.ExecuteAsyncHttpControllerContextCancellationToken">
+            <summary>Sets the stub of ApiController.ExecuteAsync(HttpControllerContext controllerContext, CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubProspectsController.Initialize(System.Web.Http.Controllers.HttpControllerContext)">
+            <summary>Sets the stub of ApiController.Initialize(HttpControllerContext controllerContext)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubProspectsController.InitializeHttpControllerContext">
+            <summary>Sets the stub of ApiController.Initialize(HttpControllerContext controllerContext)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubProspectsController.InitializeStub">
+            <summary>Initializes a new instance of type StubProspectsController</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.StubProspectsController.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.StubProspectsController.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.StubProspectsController.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:MQ163Service.Controllers.Fakes.StubSocialIntegratorController">
+            <summary>Stub type of MQ163Service.Controllers.SocialIntegratorController</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubSocialIntegratorController.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubSocialIntegratorController.Dispose(System.Boolean)">
+            <summary>Sets the stub of ApiController.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubSocialIntegratorController.DisposeBoolean">
+            <summary>Sets the stub of ApiController.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubSocialIntegratorController.ExecuteAsync(System.Web.Http.Controllers.HttpControllerContext,System.Threading.CancellationToken)">
+            <summary>Sets the stub of ApiController.ExecuteAsync(HttpControllerContext controllerContext, CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubSocialIntegratorController.ExecuteAsyncHttpControllerContextCancellationToken">
+            <summary>Sets the stub of ApiController.ExecuteAsync(HttpControllerContext controllerContext, CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubSocialIntegratorController.Initialize(System.Web.Http.Controllers.HttpControllerContext)">
+            <summary>Sets the stub of ApiController.Initialize(HttpControllerContext controllerContext)</summary>
+        </member>
+        <member name="F:MQ163Service.Controllers.Fakes.StubSocialIntegratorController.InitializeHttpControllerContext">
+            <summary>Sets the stub of ApiController.Initialize(HttpControllerContext controllerContext)</summary>
+        </member>
+        <member name="M:MQ163Service.Controllers.Fakes.StubSocialIntegratorController.InitializeStub">
+            <summary>Initializes a new instance of type StubSocialIntegratorController</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.StubSocialIntegratorController.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.StubSocialIntegratorController.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.StubSocialIntegratorController.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:MQ163Service.Facebook.Fakes.ShimCommonData">
+            <summary>Shim type of MQ163Service.Facebook.CommonData</summary>
+        </member>
+        <member name="M:MQ163Service.Facebook.Fakes.ShimCommonData.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MQ163Service.Facebook.Fakes.ShimCommonData.#ctor(MQ163Service.Facebook.CommonData)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:MQ163Service.Facebook.Fakes.ShimCommonData.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163Service.Facebook.Fakes.ShimCommonData.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163Service.Facebook.Fakes.ShimCommonData.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163Service.Facebook.Fakes.ShimCommonData.Constructor">
+            <summary>Sets the shim of CommonData.CommonData()</summary>
+        </member>
+        <member name="P:MQ163Service.Facebook.Fakes.ShimCommonData.StaticConstructor">
+            <summary>Sets the shim of CommonData.CommonData()</summary>
+        </member>
+        <member name="T:MQ163Service.Facebook.Fakes.ShimCommonData.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:MQ163Service.Facebook.Fakes.StubCommonData">
+            <summary>Stub type of MQ163Service.Facebook.CommonData</summary>
+        </member>
+        <member name="M:MQ163Service.Facebook.Fakes.StubCommonData.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MQ163Service.Facebook.Fakes.StubCommonData.InitializeStub">
+            <summary>Initializes a new instance of type StubCommonData</summary>
+        </member>
+        <member name="P:MQ163Service.Facebook.Fakes.StubCommonData.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MQ163Service.Facebook.Fakes.StubCommonData.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:MQ163Service.Facebook.Fakes.StubCommonData.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:MQ163Service.Fakes.ShimBundleConfig">
+            <summary>Shim type of MQ163Service.BundleConfig</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimBundleConfig.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimBundleConfig.#ctor(MQ163Service.BundleConfig)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimBundleConfig.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimBundleConfig.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.ShimBundleConfig.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.ShimBundleConfig.Constructor">
+            <summary>Sets the shim of BundleConfig.BundleConfig()</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.ShimBundleConfig.RegisterBundlesBundleCollection">
+            <summary>Sets the shim of BundleConfig.RegisterBundles(BundleCollection bundles)</summary>
+        </member>
+        <member name="T:MQ163Service.Fakes.ShimBundleConfig.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:MQ163Service.Fakes.ShimCommonEventsHelper">
+            <summary>Shim type of MQ163Service.CommonEventsHelper</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimCommonEventsHelper.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimCommonEventsHelper.#ctor(MQ163Service.CommonEventsHelper)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimCommonEventsHelper.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimCommonEventsHelper.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.ShimCommonEventsHelper.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.ShimCommonEventsHelper.Constructor">
+            <summary>Sets the shim of CommonEventsHelper.CommonEventsHelper()</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.ShimCommonEventsHelper.WriteToEventLogStringEventLogEntryType">
+            <summary>Sets the shim of CommonEventsHelper.WriteToEventLog(String message, EventLogEntryType entryType)</summary>
+        </member>
+        <member name="T:MQ163Service.Fakes.ShimCommonEventsHelper.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:MQ163Service.Fakes.ShimFilterConfig">
+            <summary>Shim type of MQ163Service.FilterConfig</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimFilterConfig.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimFilterConfig.#ctor(MQ163Service.FilterConfig)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimFilterConfig.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimFilterConfig.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.ShimFilterConfig.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.ShimFilterConfig.Constructor">
+            <summary>Sets the shim of FilterConfig.FilterConfig()</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.ShimFilterConfig.RegisterGlobalFiltersGlobalFilterCollection">
+            <summary>Sets the shim of FilterConfig.RegisterGlobalFilters(GlobalFilterCollection filters)</summary>
+        </member>
+        <member name="T:MQ163Service.Fakes.ShimFilterConfig.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:MQ163Service.Fakes.ShimRouteConfig">
+            <summary>Shim type of MQ163Service.RouteConfig</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimRouteConfig.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimRouteConfig.#ctor(MQ163Service.RouteConfig)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimRouteConfig.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimRouteConfig.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.ShimRouteConfig.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.ShimRouteConfig.Constructor">
+            <summary>Sets the shim of RouteConfig.RouteConfig()</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.ShimRouteConfig.RegisterRoutesRouteCollection">
+            <summary>Sets the shim of RouteConfig.RegisterRoutes(RouteCollection routes)</summary>
+        </member>
+        <member name="T:MQ163Service.Fakes.ShimRouteConfig.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:MQ163Service.Fakes.ShimWebApiApplication">
+            <summary>Shim type of MQ163Service.WebApiApplication</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimWebApiApplication.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimWebApiApplication.#ctor(MQ163Service.WebApiApplication)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimWebApiApplication.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimWebApiApplication.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimWebApiApplication.Bind(System.ComponentModel.IComponent)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimWebApiApplication.Bind(System.Web.IHttpAsyncHandler)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimWebApiApplication.Bind(System.Web.IHttpHandler)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimWebApiApplication.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.ShimWebApiApplication.Application_Start">
+            <summary>Sets the shim of WebApiApplication.Application_Start()</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.ShimWebApiApplication.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.ShimWebApiApplication.Constructor">
+            <summary>Sets the shim of WebApiApplication.WebApiApplication()</summary>
+        </member>
+        <member name="T:MQ163Service.Fakes.ShimWebApiApplication.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.ShimWebApiApplication.AllInstances.Application_Start">
+            <summary>Sets the shim of WebApiApplication.Application_Start()</summary>
+        </member>
+        <member name="T:MQ163Service.Fakes.ShimWebApiConfig">
+            <summary>Shim type of MQ163Service.WebApiConfig</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimWebApiConfig.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimWebApiConfig.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.ShimWebApiConfig.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.ShimWebApiConfig.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.ShimWebApiConfig.RegisterHttpConfiguration">
+            <summary>Sets the shim of WebApiConfig.Register(HttpConfiguration config)</summary>
+        </member>
+        <member name="T:MQ163Service.Fakes.StubBundleConfig">
+            <summary>Stub type of MQ163Service.BundleConfig</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.StubBundleConfig.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.StubBundleConfig.InitializeStub">
+            <summary>Initializes a new instance of type StubBundleConfig</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.StubBundleConfig.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.StubBundleConfig.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.StubBundleConfig.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:MQ163Service.Fakes.StubCommonEventsHelper">
+            <summary>Stub type of MQ163Service.CommonEventsHelper</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.StubCommonEventsHelper.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.StubCommonEventsHelper.InitializeStub">
+            <summary>Initializes a new instance of type StubCommonEventsHelper</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.StubCommonEventsHelper.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.StubCommonEventsHelper.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.StubCommonEventsHelper.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:MQ163Service.Fakes.StubFilterConfig">
+            <summary>Stub type of MQ163Service.FilterConfig</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.StubFilterConfig.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.StubFilterConfig.InitializeStub">
+            <summary>Initializes a new instance of type StubFilterConfig</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.StubFilterConfig.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.StubFilterConfig.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.StubFilterConfig.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:MQ163Service.Fakes.StubRouteConfig">
+            <summary>Stub type of MQ163Service.RouteConfig</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.StubRouteConfig.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.StubRouteConfig.InitializeStub">
+            <summary>Initializes a new instance of type StubRouteConfig</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.StubRouteConfig.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.StubRouteConfig.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.StubRouteConfig.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:MQ163Service.Fakes.StubWebApiApplication">
+            <summary>Stub type of MQ163Service.WebApiApplication</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.StubWebApiApplication.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.StubWebApiApplication.Dispose">
+            <summary>Sets the stub of HttpApplication.Dispose()</summary>
+        </member>
+        <member name="F:MQ163Service.Fakes.StubWebApiApplication.Dispose01">
+            <summary>Sets the stub of HttpApplication.Dispose()</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.StubWebApiApplication.GetOutputCacheProviderName(System.Web.HttpContext)">
+            <summary>Sets the stub of HttpApplication.GetOutputCacheProviderName(HttpContext context)</summary>
+        </member>
+        <member name="F:MQ163Service.Fakes.StubWebApiApplication.GetOutputCacheProviderNameHttpContext">
+            <summary>Sets the stub of HttpApplication.GetOutputCacheProviderName(HttpContext context)</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.StubWebApiApplication.GetVaryByCustomString(System.Web.HttpContext,System.String)">
+            <summary>Sets the stub of HttpApplication.GetVaryByCustomString(HttpContext context, String custom)</summary>
+        </member>
+        <member name="F:MQ163Service.Fakes.StubWebApiApplication.GetVaryByCustomStringHttpContextString">
+            <summary>Sets the stub of HttpApplication.GetVaryByCustomString(HttpContext context, String custom)</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.StubWebApiApplication.Init">
+            <summary>Sets the stub of HttpApplication.Init()</summary>
+        </member>
+        <member name="F:MQ163Service.Fakes.StubWebApiApplication.Init01">
+            <summary>Sets the stub of HttpApplication.Init()</summary>
+        </member>
+        <member name="M:MQ163Service.Fakes.StubWebApiApplication.InitializeStub">
+            <summary>Initializes a new instance of type StubWebApiApplication</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.StubWebApiApplication.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.StubWebApiApplication.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:MQ163Service.Fakes.StubWebApiApplication.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:MQ163Service.Models.Fakes.ShimDataAccess">
+            <summary>Shim type of MQ163Service.Models.DataAccess</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.ShimDataAccess.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.ShimDataAccess.#ctor(MQ163Service.Models.DataAccess)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.ShimDataAccess.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.ShimDataAccess.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimDataAccess.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimDataAccess.Constructor">
+            <summary>Sets the shim of DataAccess.DataAccess()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimDataAccess.GetCustomers">
+            <summary>Sets the shim of DataAccess.GetCustomers()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimDataAccess.GetLeads">
+            <summary>Sets the shim of DataAccess.GetLeads()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimDataAccess.GetOffers">
+            <summary>Sets the shim of DataAccess.GetOffers()</summary>
+        </member>
+        <member name="T:MQ163Service.Models.Fakes.ShimDataAccess.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:MQ163Service.Models.Fakes.ShimMQ163DataContext">
+            <summary>Shim type of MQ163Service.Models.MQ163DataContext</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.ShimMQ163DataContext.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.ShimMQ163DataContext.#ctor(MQ163Service.Models.MQ163DataContext)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.ShimMQ163DataContext.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.ShimMQ163DataContext.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.ShimMQ163DataContext.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMQ163DataContext.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMQ163DataContext.Constructor">
+            <summary>Sets the shim of MQ163DataContext.MQ163DataContext()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMQ163DataContext.ConstructorIDbConnection">
+            <summary>Sets the shim of MQ163DataContext.MQ163DataContext(IDbConnection connection)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMQ163DataContext.ConstructorIDbConnectionMappingSource">
+            <summary>Sets the shim of MQ163DataContext.MQ163DataContext(IDbConnection connection, MappingSource mappingSource)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMQ163DataContext.ConstructorString">
+            <summary>Sets the shim of MQ163DataContext.MQ163DataContext(String connection)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMQ163DataContext.ConstructorStringMappingSource">
+            <summary>Sets the shim of MQ163DataContext.MQ163DataContext(String connection, MappingSource mappingSource)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMQ163DataContext.MerchandizeOffersGet">
+            <summary>Sets the shim of MQ163DataContext.get_MerchandizeOffers()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMQ163DataContext.ProspectsGet">
+            <summary>Sets the shim of MQ163DataContext.get_Prospects()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMQ163DataContext.StaticConstructor">
+            <summary>Sets the shim of MQ163DataContext.MQ163DataContext()</summary>
+        </member>
+        <member name="T:MQ163Service.Models.Fakes.ShimMQ163DataContext.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMQ163DataContext.AllInstances.MerchandizeOffersGet">
+            <summary>Sets the shim of MQ163DataContext.get_MerchandizeOffers()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMQ163DataContext.AllInstances.ProspectsGet">
+            <summary>Sets the shim of MQ163DataContext.get_Prospects()</summary>
+        </member>
+        <member name="T:MQ163Service.Models.Fakes.ShimMerchandizeOffer">
+            <summary>Shim type of MQ163Service.Models.MerchandizeOffer</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.ShimMerchandizeOffer.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.ShimMerchandizeOffer.#ctor(MQ163Service.Models.MerchandizeOffer)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.ShimMerchandizeOffer.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.ShimMerchandizeOffer.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.ShimMerchandizeOffer.Bind(System.ComponentModel.INotifyPropertyChanged)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.ShimMerchandizeOffer.Bind(System.ComponentModel.INotifyPropertyChanging)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.Constructor">
+            <summary>Sets the shim of MerchandizeOffer.MerchandizeOffer()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.DetailsGet">
+            <summary>Sets the shim of MerchandizeOffer.get_Details()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.DetailsSetString">
+            <summary>Sets the shim of MerchandizeOffer.set_Details(String value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.IdGet">
+            <summary>Sets the shim of MerchandizeOffer.get_Id()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.IdSetInt32">
+            <summary>Sets the shim of MerchandizeOffer.set_Id(Int32 value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.PropertyChangedAddPropertyChangedEventHandler">
+            <summary>Sets the shim of MerchandizeOffer.add_PropertyChanged(PropertyChangedEventHandler value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.PropertyChangedRemovePropertyChangedEventHandler">
+            <summary>Sets the shim of MerchandizeOffer.remove_PropertyChanged(PropertyChangedEventHandler value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.PropertyChangingAddPropertyChangingEventHandler">
+            <summary>Sets the shim of MerchandizeOffer.add_PropertyChanging(PropertyChangingEventHandler value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.PropertyChangingRemovePropertyChangingEventHandler">
+            <summary>Sets the shim of MerchandizeOffer.remove_PropertyChanging(PropertyChangingEventHandler value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.SendPropertyChangedString">
+            <summary>Sets the shim of MerchandizeOffer.SendPropertyChanged(String propertyName)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.SendPropertyChanging">
+            <summary>Sets the shim of MerchandizeOffer.SendPropertyChanging()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.StaticConstructor">
+            <summary>Sets the shim of MerchandizeOffer.MerchandizeOffer()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.TitleGet">
+            <summary>Sets the shim of MerchandizeOffer.get_Title()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.TitleSetString">
+            <summary>Sets the shim of MerchandizeOffer.set_Title(String value)</summary>
+        </member>
+        <member name="T:MQ163Service.Models.Fakes.ShimMerchandizeOffer.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.AllInstances.DetailsGet">
+            <summary>Sets the shim of MerchandizeOffer.get_Details()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.AllInstances.DetailsSetString">
+            <summary>Sets the shim of MerchandizeOffer.set_Details(String value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.AllInstances.IdGet">
+            <summary>Sets the shim of MerchandizeOffer.get_Id()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.AllInstances.IdSetInt32">
+            <summary>Sets the shim of MerchandizeOffer.set_Id(Int32 value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.AllInstances.PropertyChangedAddPropertyChangedEventHandler">
+            <summary>Sets the shim of MerchandizeOffer.add_PropertyChanged(PropertyChangedEventHandler value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.AllInstances.PropertyChangedRemovePropertyChangedEventHandler">
+            <summary>Sets the shim of MerchandizeOffer.remove_PropertyChanged(PropertyChangedEventHandler value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.AllInstances.PropertyChangingAddPropertyChangingEventHandler">
+            <summary>Sets the shim of MerchandizeOffer.add_PropertyChanging(PropertyChangingEventHandler value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.AllInstances.PropertyChangingRemovePropertyChangingEventHandler">
+            <summary>Sets the shim of MerchandizeOffer.remove_PropertyChanging(PropertyChangingEventHandler value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.AllInstances.SendPropertyChangedString">
+            <summary>Sets the shim of MerchandizeOffer.SendPropertyChanged(String propertyName)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.AllInstances.SendPropertyChanging">
+            <summary>Sets the shim of MerchandizeOffer.SendPropertyChanging()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.AllInstances.TitleGet">
+            <summary>Sets the shim of MerchandizeOffer.get_Title()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimMerchandizeOffer.AllInstances.TitleSetString">
+            <summary>Sets the shim of MerchandizeOffer.set_Title(String value)</summary>
+        </member>
+        <member name="T:MQ163Service.Models.Fakes.ShimProspect">
+            <summary>Shim type of MQ163Service.Models.Prospect</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.ShimProspect.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.ShimProspect.#ctor(MQ163Service.Models.Prospect)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.ShimProspect.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.ShimProspect.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.ShimProspect.Bind(System.ComponentModel.INotifyPropertyChanged)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.ShimProspect.Bind(System.ComponentModel.INotifyPropertyChanging)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.CarGet">
+            <summary>Sets the shim of Prospect.get_Car()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.CarSetString">
+            <summary>Sets the shim of Prospect.set_Car(String value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.Constructor">
+            <summary>Sets the shim of Prospect.Prospect()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.FeaturesGet">
+            <summary>Sets the shim of Prospect.get_Features()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.FeaturesSetString">
+            <summary>Sets the shim of Prospect.set_Features(String value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.FullNameGet">
+            <summary>Sets the shim of Prospect.get_FullName()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.FullNameSetString">
+            <summary>Sets the shim of Prospect.set_FullName(String value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.IdGet">
+            <summary>Sets the shim of Prospect.get_Id()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.IdSetInt32">
+            <summary>Sets the shim of Prospect.set_Id(Int32 value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.IsCustomerGet">
+            <summary>Sets the shim of Prospect.get_IsCustomer()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.IsCustomerSetBoolean">
+            <summary>Sets the shim of Prospect.set_IsCustomer(Boolean value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.PropertyChangedAddPropertyChangedEventHandler">
+            <summary>Sets the shim of Prospect.add_PropertyChanged(PropertyChangedEventHandler value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.PropertyChangedRemovePropertyChangedEventHandler">
+            <summary>Sets the shim of Prospect.remove_PropertyChanged(PropertyChangedEventHandler value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.PropertyChangingAddPropertyChangingEventHandler">
+            <summary>Sets the shim of Prospect.add_PropertyChanging(PropertyChangingEventHandler value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.PropertyChangingRemovePropertyChangingEventHandler">
+            <summary>Sets the shim of Prospect.remove_PropertyChanging(PropertyChangingEventHandler value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.SendPropertyChangedString">
+            <summary>Sets the shim of Prospect.SendPropertyChanged(String propertyName)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.SendPropertyChanging">
+            <summary>Sets the shim of Prospect.SendPropertyChanging()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.StaticConstructor">
+            <summary>Sets the shim of Prospect.Prospect()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.emailGet">
+            <summary>Sets the shim of Prospect.get_email()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.emailSetString">
+            <summary>Sets the shim of Prospect.set_email(String value)</summary>
+        </member>
+        <member name="T:MQ163Service.Models.Fakes.ShimProspect.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.AllInstances.CarGet">
+            <summary>Sets the shim of Prospect.get_Car()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.AllInstances.CarSetString">
+            <summary>Sets the shim of Prospect.set_Car(String value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.AllInstances.FeaturesGet">
+            <summary>Sets the shim of Prospect.get_Features()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.AllInstances.FeaturesSetString">
+            <summary>Sets the shim of Prospect.set_Features(String value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.AllInstances.FullNameGet">
+            <summary>Sets the shim of Prospect.get_FullName()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.AllInstances.FullNameSetString">
+            <summary>Sets the shim of Prospect.set_FullName(String value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.AllInstances.IdGet">
+            <summary>Sets the shim of Prospect.get_Id()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.AllInstances.IdSetInt32">
+            <summary>Sets the shim of Prospect.set_Id(Int32 value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.AllInstances.IsCustomerGet">
+            <summary>Sets the shim of Prospect.get_IsCustomer()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.AllInstances.IsCustomerSetBoolean">
+            <summary>Sets the shim of Prospect.set_IsCustomer(Boolean value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.AllInstances.PropertyChangedAddPropertyChangedEventHandler">
+            <summary>Sets the shim of Prospect.add_PropertyChanged(PropertyChangedEventHandler value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.AllInstances.PropertyChangedRemovePropertyChangedEventHandler">
+            <summary>Sets the shim of Prospect.remove_PropertyChanged(PropertyChangedEventHandler value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.AllInstances.PropertyChangingAddPropertyChangingEventHandler">
+            <summary>Sets the shim of Prospect.add_PropertyChanging(PropertyChangingEventHandler value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.AllInstances.PropertyChangingRemovePropertyChangingEventHandler">
+            <summary>Sets the shim of Prospect.remove_PropertyChanging(PropertyChangingEventHandler value)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.AllInstances.SendPropertyChangedString">
+            <summary>Sets the shim of Prospect.SendPropertyChanged(String propertyName)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.AllInstances.SendPropertyChanging">
+            <summary>Sets the shim of Prospect.SendPropertyChanging()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.AllInstances.emailGet">
+            <summary>Sets the shim of Prospect.get_email()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimProspect.AllInstances.emailSetString">
+            <summary>Sets the shim of Prospect.set_email(String value)</summary>
+        </member>
+        <member name="T:MQ163Service.Models.Fakes.StubDataAccess">
+            <summary>Stub type of MQ163Service.Models.DataAccess</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.StubDataAccess.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.StubDataAccess.InitializeStub">
+            <summary>Initializes a new instance of type StubDataAccess</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.StubDataAccess.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.StubDataAccess.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.StubDataAccess.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:MQ163Service.Models.Fakes.StubMQ163DataContext">
+            <summary>Stub type of MQ163Service.Models.MQ163DataContext</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.StubMQ163DataContext.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.StubMQ163DataContext.#ctor(System.Data.IDbConnection)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.StubMQ163DataContext.#ctor(System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.StubMQ163DataContext.#ctor(System.Data.IDbConnection,System.Data.Linq.Mapping.MappingSource)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.StubMQ163DataContext.#ctor(System.String,System.Data.Linq.Mapping.MappingSource)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.StubMQ163DataContext.Dispose(System.Boolean)">
+            <summary>Sets the stub of DataContext.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:MQ163Service.Models.Fakes.StubMQ163DataContext.DisposeBoolean">
+            <summary>Sets the stub of DataContext.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.StubMQ163DataContext.InitializeStub">
+            <summary>Initializes a new instance of type StubMQ163DataContext</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.StubMQ163DataContext.SubmitChanges(System.Data.Linq.ConflictMode)">
+            <summary>Sets the stub of DataContext.SubmitChanges(ConflictMode failureMode)</summary>
+        </member>
+        <member name="F:MQ163Service.Models.Fakes.StubMQ163DataContext.SubmitChangesConflictMode">
+            <summary>Sets the stub of DataContext.SubmitChanges(ConflictMode failureMode)</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.StubMQ163DataContext.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.StubMQ163DataContext.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.StubMQ163DataContext.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:MQ163Service.Models.Fakes.StubMerchandizeOffer">
+            <summary>Stub type of MQ163Service.Models.MerchandizeOffer</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.StubMerchandizeOffer.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.StubMerchandizeOffer.InitializeStub">
+            <summary>Initializes a new instance of type StubMerchandizeOffer</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.StubMerchandizeOffer.SendPropertyChanged(System.String)">
+            <summary>Sets the stub of MerchandizeOffer.SendPropertyChanged(String propertyName)</summary>
+        </member>
+        <member name="F:MQ163Service.Models.Fakes.StubMerchandizeOffer.SendPropertyChangedString">
+            <summary>Sets the stub of MerchandizeOffer.SendPropertyChanged(String propertyName)</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.StubMerchandizeOffer.SendPropertyChanging">
+            <summary>Sets the stub of MerchandizeOffer.SendPropertyChanging()</summary>
+        </member>
+        <member name="F:MQ163Service.Models.Fakes.StubMerchandizeOffer.SendPropertyChanging01">
+            <summary>Sets the stub of MerchandizeOffer.SendPropertyChanging()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.StubMerchandizeOffer.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.StubMerchandizeOffer.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.StubMerchandizeOffer.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:MQ163Service.Models.Fakes.StubProspect">
+            <summary>Stub type of MQ163Service.Models.Prospect</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.StubProspect.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.StubProspect.InitializeStub">
+            <summary>Initializes a new instance of type StubProspect</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.StubProspect.SendPropertyChanged(System.String)">
+            <summary>Sets the stub of Prospect.SendPropertyChanged(String propertyName)</summary>
+        </member>
+        <member name="F:MQ163Service.Models.Fakes.StubProspect.SendPropertyChangedString">
+            <summary>Sets the stub of Prospect.SendPropertyChanged(String propertyName)</summary>
+        </member>
+        <member name="M:MQ163Service.Models.Fakes.StubProspect.SendPropertyChanging">
+            <summary>Sets the stub of Prospect.SendPropertyChanging()</summary>
+        </member>
+        <member name="F:MQ163Service.Models.Fakes.StubProspect.SendPropertyChanging01">
+            <summary>Sets the stub of Prospect.SendPropertyChanging()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.StubProspect.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.StubProspect.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.StubProspect.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+    </members>
+</doc>

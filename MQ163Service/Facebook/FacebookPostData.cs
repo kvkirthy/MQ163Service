@@ -27,6 +27,10 @@ namespace MQ163.Application.External
                 }.SetValue(File.ReadAllBytes(PictureUrl));
             parameters.scope = "publish_stream,photo_upload";
             parameters.access_token = AccessToken;
+            parameters.privacy = new
+            {
+                value = "EVERYONE",
+            };
 
             return parameters;
         }

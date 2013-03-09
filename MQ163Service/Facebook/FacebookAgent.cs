@@ -8,12 +8,14 @@ using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 using Facebook;
 using MQ163.External.Facebook;
-using MQ163Service.Facebook;
 using MQ163Service;
+using System.Runtime.CompilerServices;
+using MQ163Service.Facebook;
 
+[assembly: InternalsVisibleTo("MQ163Service.Tests")]
 namespace MQ163.Application.External
 {
-    internal class FacebookAgent : IDisposable
+    internal class FacebookAgent : IFacebookAgent
     {
         private FacebookClient client = new FacebookClient();
         private string baseUrl = "https://graph.facebook.com";
@@ -30,7 +32,7 @@ namespace MQ163.Application.External
         /// Gets the FacebookLogin Url to be Navigated
         /// </summary>
         /// <returns>Returns the login URl for Facebook</returns>
-        internal string GetFacebookLoginURL()
+        public string GetFacebookLoginURL()
         {
             try
             {
@@ -54,7 +56,7 @@ namespace MQ163.Application.External
         /// Gets the News Feeds of the Facebook Page
         /// </summary>
         /// <returns>Returns list of Feeds of type "Picture" from MQ163 page</returns>
-        internal IEnumerable<IFacebookPost> GetAllFeeds()
+        public IEnumerable<IFacebookPost> GetAllFeeds()
         {
             var json = new JavaScriptSerializer();
             List<IFacebookPost> postsList = new List<IFacebookPost>();
@@ -103,7 +105,7 @@ namespace MQ163.Application.External
                         }
                         else
                         {
-                            post.CommentCount = 0;
+                            post.LikeCount = 0;
                         }
 
 
@@ -124,7 +126,7 @@ namespace MQ163.Application.External
         /// <param name="postData">Data to be posted</param>
         /// <returns>Returns True: If posted successfully. 
         /// Exception: If post is unsuccessfull</returns>
-        internal bool AddPost(IFacebookPostData postData)
+        public bool AddPost(IFacebookPostData postData)
         {
             try
             {
@@ -138,7 +140,9 @@ namespace MQ163.Application.External
                 /*if (null != postData.TaggedUserEmail)
                     publishResponse = client.PostTaskAsync(path, postData.GetPostObject());
                 else*/
-                publishResponse = client.PostTaskAsync(path, postData.GetPostObject());
+                FacebookClient fb = new FacebookClient();
+                fb.AccessToken = this.AccessToken;
+                publishResponse = fb.PostTaskAsync(path, postData.GetPostObject());
 
                 while (publishResponse.Status == TaskStatus.WaitingForActivation) ;
                 if (publishResponse.Status == TaskStatus.RanToCompletion)
@@ -163,7 +167,7 @@ namespace MQ163.Application.External
             }
         }
 
-        internal bool TaggingPhoto(string photoId, string userId)
+        public bool TaggingPhoto(string photoId, string userId)
         {
             dynamic parameters = new ExpandoObject();
             var json = new JavaScriptSerializer();
@@ -172,7 +176,7 @@ namespace MQ163.Application.External
 
             string path = string.Format("{0}/tags?access_token={1}", photoId, AccessToken);
             dynamic publishResponse;
-            publishResponse = client.GetTaskAsync(path, null);
+            publishResponse = client.GetTaskAsync(path, parameters);
             while (publishResponse.Status == TaskStatus.WaitingForActivation) ;
             if (publishResponse.Status == TaskStatus.RanToCompletion)
             {
@@ -256,7 +260,7 @@ namespace MQ163.Application.External
         /// </summary>
         /// <param name="postId">Facebook post ID</param>
         /// <returns>Returns the list of comments for the post</returns>
-        internal IEnumerable<FacebookComment> GetAllCommentsForPost(string postId)
+        public IEnumerable<FacebookComment> GetAllCommentsForPost(string postId)
         {
             try
             {
@@ -305,7 +309,7 @@ namespace MQ163.Application.External
         /// </summary>
         /// <param name="postId">Facebook post ID</param>
         /// <returns>Returns list of likes for the post</returns>
-        internal IEnumerable<IFacebookProfile> GetAllLikesForPost(string postId)
+        public IEnumerable<IFacebookProfile> GetAllLikesForPost(string postId)
         {
             try
             {

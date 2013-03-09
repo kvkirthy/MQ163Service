@@ -141,6 +141,7 @@
     <Compile Include="Facebook\FacebookPost.cs" />
     <Compile Include="Facebook\FacebookPostData.cs" />
     <Compile Include="Facebook\FacebookProfile.cs" />
+    <Compile Include="Facebook\IFacebookAgent.cs" />
     <Compile Include="Facebook\IFacebookPage.cs" />
     <Compile Include="Facebook\IFacebookPost.cs" />
     <Compile Include="Facebook\IFacebookPostData.cs" />

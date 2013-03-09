@@ -1,17 +1,25 @@
-﻿using System;
+﻿using MQ163.External.Facebook;
+using System;
 using System.Collections.Generic;
-using MQ163.External.Facebook;
+using System.Runtime.CompilerServices;
 
+[assembly: InternalsVisibleTo("MQ163Service.Tests")]
 namespace MQ163.Application.External
 {
     internal class FacebookPage : IFacebookPage
     {
-        private FacebookAgent fbAgent = null;
+        private IFacebookAgent fbAgent = null;
 
         public FacebookPage()
         {
             fbAgent = new FacebookAgent();
             //fbAgent.FacebookLogin();
+        }
+
+        //TOBE: Used by the tests only
+        public FacebookPage(IFacebookAgent agent)
+        {
+            this.fbAgent = agent;
         }
 
         public FacebookPage(string accessToken)

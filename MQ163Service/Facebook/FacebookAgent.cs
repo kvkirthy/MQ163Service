@@ -9,6 +9,7 @@ using System.Web.Script.Serialization;
 using Facebook;
 using MQ163.External.Facebook;
 using MQ163Service.Facebook;
+using MQ163Service;
 
 namespace MQ163.Application.External
 {
@@ -151,6 +152,7 @@ namespace MQ163.Application.External
                 }
                 else if (publishResponse.Status == TaskStatus.Faulted)
                 {
+                    //CommonEventsHelper.WriteToEventLog(string.Format("Error posting message - {0}", (publishResponse.Exception as Exception).Message), System.Diagnostics.EventLogEntryType.Error);
                     throw (new InvalidOperationException((((Exception)publishResponse.Exception).InnerException).Message, (Exception)publishResponse.Exception));
                 }
                 return false;

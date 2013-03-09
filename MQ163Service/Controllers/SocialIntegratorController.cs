@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
 using MQ163.Application.Facade;
+using System.Diagnostics;
 
 namespace MQ163Service.Controllers
 {
@@ -36,6 +37,8 @@ namespace MQ163Service.Controllers
                 messageCaption = provider.FormData.Get("caption");
                 taggedUserEmail = provider.FormData.Get("tagUser");
 
+                CommonEventsHelper.WriteToEventLog(string.Format("{0}. {1}",messageCaption,fileUri),EventLogEntryType.Information);
+
                 new FacebookFacade()
                     .PostPictureMesssage(messageCaption, fileUri, taggedUserEmail);
 
@@ -44,9 +47,12 @@ namespace MQ163Service.Controllers
             }
             catch (System.Exception e)
             {
+                CommonEventsHelper.WriteToEventLog(e.Message, EventLogEntryType.Error);
                 return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, e);
             }
         }
+
+ 
 
     }
 }

@@ -541,6 +541,12 @@
         <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.CreatedDateAndTimeSetDateTime">
             <summary>Sets the shim of FacebookComment.set_CreatedDateAndTime(DateTime value)</summary>
         </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.FirstNameGet">
+            <summary>Sets the shim of FacebookComment.get_FirstName()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.FirstNameSetString">
+            <summary>Sets the shim of FacebookComment.set_FirstName(String value)</summary>
+        </member>
         <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.IdGet">
             <summary>Sets the shim of FacebookComment.get_Id()</summary>
         </member>
@@ -553,8 +559,20 @@
         <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.IsSupportiveSetNullableOfBoolean">
             <summary>Sets the shim of FacebookComment.set_IsSupportive(Nullable`1&lt;Boolean&gt; value)</summary>
         </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.LastNameGet">
+            <summary>Sets the shim of FacebookComment.get_LastName()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.LastNameSetString">
+            <summary>Sets the shim of FacebookComment.set_LastName(String value)</summary>
+        </member>
         <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.UserGet">
             <summary>Sets the shim of FacebookComment.get_User()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.UserNameGet">
+            <summary>Sets the shim of FacebookComment.get_UserName()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.UserNameSetString">
+            <summary>Sets the shim of FacebookComment.set_UserName(String value)</summary>
         </member>
         <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.UserSetIFacebookProfile">
             <summary>Sets the shim of FacebookComment.set_User(IFacebookProfile value)</summary>
@@ -574,6 +592,12 @@
         <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.AllInstances.CreatedDateAndTimeSetDateTime">
             <summary>Sets the shim of FacebookComment.set_CreatedDateAndTime(DateTime value)</summary>
         </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.AllInstances.FirstNameGet">
+            <summary>Sets the shim of FacebookComment.get_FirstName()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.AllInstances.FirstNameSetString">
+            <summary>Sets the shim of FacebookComment.set_FirstName(String value)</summary>
+        </member>
         <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.AllInstances.IdGet">
             <summary>Sets the shim of FacebookComment.get_Id()</summary>
         </member>
@@ -586,8 +610,20 @@
         <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.AllInstances.IsSupportiveSetNullableOfBoolean">
             <summary>Sets the shim of FacebookComment.set_IsSupportive(Nullable`1&lt;Boolean&gt; value)</summary>
         </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.AllInstances.LastNameGet">
+            <summary>Sets the shim of FacebookComment.get_LastName()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.AllInstances.LastNameSetString">
+            <summary>Sets the shim of FacebookComment.set_LastName(String value)</summary>
+        </member>
         <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.AllInstances.UserGet">
             <summary>Sets the shim of FacebookComment.get_User()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.AllInstances.UserNameGet">
+            <summary>Sets the shim of FacebookComment.get_UserName()</summary>
+        </member>
+        <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.AllInstances.UserNameSetString">
+            <summary>Sets the shim of FacebookComment.set_UserName(String value)</summary>
         </member>
         <member name="P:MQ163.External.Facebook.Fakes.ShimFacebookComment.AllInstances.UserSetIFacebookProfile">
             <summary>Sets the shim of FacebookComment.set_User(IFacebookProfile value)</summary>

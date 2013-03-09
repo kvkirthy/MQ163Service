@@ -33,13 +33,24 @@ namespace MQ163Service.Tests.Facebook
 
         [TestMethod]
         [TestCategory("Integration")]
-        public void GetAllCommentsTest()
+        public void GetAllPostsTest()
         {
             this.facade = new FacebookFacade();
             List<IFacebookPost> result = (List<IFacebookPost>)facade.GetAllPosts();
 
             Assert.IsNotNull(result, "Posting are not returned by the page.");
             Assert.IsTrue(result.Count > 0, "There are no posts on page.");
+        }
+
+        [TestMethod]
+        [TestCategory("Integration")]
+        public void GetAllCommentsTest()
+        {
+            this.facade = new FacebookFacade();
+            List<FacebookComment> result = (List<FacebookComment>)facade.GetAllCommentsForPost("450370435035504");
+
+            Assert.IsNotNull(result, "GetAllComments not working.");
+            Assert.IsTrue(result.Count > 0, "There are no comments for the post.");
         }
 
         [TestMethod]
@@ -100,7 +111,7 @@ namespace MQ163Service.Tests.Facebook
 
         [TestMethod]
         [TestCategory("Unit")]
-        public void GetAllPostsTest()
+        public void GetAllPostsUnitTest()
         {
             bool IsPageGetAllPostsCalled = false;
             this.FacebookPageStub = new StubIFacebookPage()

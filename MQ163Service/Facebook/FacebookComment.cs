@@ -9,9 +9,27 @@ namespace MQ163.External.Facebook
         /// </summary>
         public IFacebookProfile User
         {
-            get;
-            set;
+            /* this is a temporary work around for not being able to parse child JSON objects in Objective C. Need to change later. */
+            get
+            {
+                return null;
+            }
+            set
+            {
+                
+                this.FirstName = value.FirstName;
+                this.LastName = value.LastName;
+                this.UserName = value.UserName;
+            }
         }
+
+       
+
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string UserName { get; set; }
+
+        /* end of work around */
 
         /// <summary>
         /// Commented Text

@@ -1,11 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MQ163.Application.Facade;
-using MQ163Service.Facebook;
-using MQ163Service.Tests.Mocked_Classes;
 using MQ163.External.Facebook;
 using MQ163.External.Facebook.Fakes;
-using System.Collections.Generic;
+using MQ163Service.Facebook;
 
 namespace MQ163Service.Tests.Facebook
 {
@@ -18,7 +17,7 @@ namespace MQ163Service.Tests.Facebook
         [TestInitialize]
         public void TestInitialize()
         {
-            CommonData.AuthToken = "AAAH7kNqRjzEBAErSt1hOYz6EdygxLBU8xFZBomQ09SfwYy7jdgtSLiD3dGPfUZBL6eFqREZB2sfbdDH3x8UFbudQncKqZABR1qWZBgZAxF9ADEmqs0YVDw";
+            CommonData.AuthToken = "AAAH7kNqRjzEBAFZCBHZBSY8wPhq6pvBzx0GYz2valED0ZCzXbUDZAd5L1RC75Usp2xNIlfowEKhZBIb1pwOy7kaeZCiaX8noNttipFlTTERzkAsyk07bzZC";
         }
 
         [TestMethod]
@@ -47,7 +46,7 @@ namespace MQ163Service.Tests.Facebook
         public void GetAllCommentsTest()
         {
             this.facade = new FacebookFacade();
-            List<FacebookComment> result = (List<FacebookComment>)facade.GetAllCommentsForPost("450370435035504");
+            List<FacebookComment> result = (List<FacebookComment>)facade.GetAllCommentsForPost("438137436258804_450569895015558");
 
             Assert.IsNotNull(result, "GetAllComments not working.");
             Assert.IsTrue(result.Count > 0, "There are no comments for the post.");

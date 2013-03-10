@@ -1099,6 +1099,9 @@
         <member name="P:MQ163Service.Controllers.Fakes.ShimProspectsController.Constructor">
             <summary>Sets the shim of ProspectsController.ProspectsController()</summary>
         </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimProspectsController.CreateLeadString">
+            <summary>Sets the shim of ProspectsController.CreateLead(String fullName)</summary>
+        </member>
         <member name="P:MQ163Service.Controllers.Fakes.ShimProspectsController.GetBoolean">
             <summary>Sets the shim of ProspectsController.Get(Boolean isCustomer)</summary>
         </member>
@@ -1107,6 +1110,9 @@
         </member>
         <member name="T:MQ163Service.Controllers.Fakes.ShimProspectsController.AllInstances">
             <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:MQ163Service.Controllers.Fakes.ShimProspectsController.AllInstances.CreateLeadString">
+            <summary>Sets the shim of ProspectsController.CreateLead(String fullName)</summary>
         </member>
         <member name="P:MQ163Service.Controllers.Fakes.ShimProspectsController.AllInstances.GetBoolean">
             <summary>Sets the shim of ProspectsController.Get(Boolean isCustomer)</summary>
@@ -1869,6 +1875,9 @@
         </member>
         <member name="P:MQ163Service.Models.Fakes.ShimDataAccess.Constructor">
             <summary>Sets the shim of DataAccess.DataAccess()</summary>
+        </member>
+        <member name="P:MQ163Service.Models.Fakes.ShimDataAccess.CreateLeadString">
+            <summary>Sets the shim of DataAccess.CreateLead(String fullName)</summary>
         </member>
         <member name="P:MQ163Service.Models.Fakes.ShimDataAccess.GetCustomers">
             <summary>Sets the shim of DataAccess.GetCustomers()</summary>

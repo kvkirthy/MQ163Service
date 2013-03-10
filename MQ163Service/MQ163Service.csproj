@@ -226,6 +226,7 @@
     <Content Include="Facebook\FacebookAdpater.cd" />
     <None Include="Properties\PublishProfiles\Merchandize.pubxml" />
     <None Include="Properties\PublishProfiles\MQ163ServicePublish.pubxml" />
+    <None Include="Properties\PublishProfiles\Seshu VDI Deployment.pubxml" />
     <None Include="Properties\PublishProfiles\VDI Deployment.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />

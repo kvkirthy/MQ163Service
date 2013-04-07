@@ -5,15 +5,38 @@ using Facebook;
 using MQ163.External.Facebook;
 namespace MQ163.Application.External
 {
+    /// <summary>
+    /// Encapsulates Facebook Post Data
+    /// </summary>
     public class FacebookPostData : IFacebookPostData
     {
         #region IFacebookPostData Members
 
+        /// <summary>
+        /// Post Message
+        /// </summary>
         public string Message { get; set; }
+
+        /// <summary>
+        /// Tagged User's email
+        /// </summary>
         public string TaggedUserEmail { get; set; }
+
+        /// <summary>
+        /// Post picture URL
+        /// </summary>
         public string PictureUrl { get; set; }
+
+        /// <summary>
+        /// User Access Toekn
+        /// </summary>
         public string AccessToken { get; set; }
 
+        /// <summary>
+        /// Get Facebook Post Object
+        /// </summary>
+        /// <param name="userID">User to be tagged</param>
+        /// <returns>Post Object</returns>
         public dynamic GetPostObject()
         {
             dynamic parameters = new ExpandoObject();

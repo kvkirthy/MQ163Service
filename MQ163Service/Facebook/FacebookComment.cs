@@ -23,10 +23,19 @@ namespace MQ163.External.Facebook
             }
         }
 
-       
-
+        /// <summary>
+        /// First Name of the user commented on post
+        /// </summary>
         public string FirstName { get; set; }
+
+        /// <summary>
+        /// Last name of the user commented on post
+        /// </summary>
         public string LastName { get; set; }
+
+        /// <summary>
+        /// User name of the user commented on post.
+        /// </summary>
         public string UserName { get; set; }
 
         /* end of work around */
@@ -41,7 +50,7 @@ namespace MQ163.External.Facebook
         }
 
         /// <summary>
-        /// Is User liked the post
+        /// Has User liked the post
         /// </summary>
         public Nullable<bool> IsSupportive
         {

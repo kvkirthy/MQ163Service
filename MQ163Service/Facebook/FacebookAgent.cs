@@ -17,57 +17,42 @@ namespace MQ163.Application.External
 {
     internal class FacebookAgent : IFacebookAgent
     {
-        private FacebookClient client = new FacebookClient();
-        private string baseUrl = "https://graph.facebook.com";
-        public string AccessToken { get; private set; }
-        public bool IsLogged { get; set; }
+        #region Private Fields
+            private FacebookClient _client = new FacebookClient();
+            private string _baseUrl = "https://graph.facebook.com";
+        #endregion
 
+        public string AccessToken { get; private set; }
+        public bool IsLoggedIn { get; set; }
+
+        /// <summary>
+        /// Constructor - instantiate the Facebook Agent
+        /// </summary>
         public FacebookAgent()
         {
             AccessToken = CommonData.AuthToken;
-            IsLogged = true;
+            IsLoggedIn = true;
         }
 
-        /// <summary>
-        /// Gets the FacebookLogin Url to be Navigated
-        /// </summary>
-        /// <returns>Returns the login URl for Facebook</returns>
-        public string GetFacebookLoginURL()
-        {
-            try
-            {
-                dynamic parameters = new ExpandoObject();
-                string appId = ConfigurationManager.AppSettings["Facebook:AppID"].ToString();
-                string appSecret = ConfigurationManager.AppSettings["Facebook:AppSecret"].ToString();
-
-                parameters.client_id = appId;
-                parameters.response_type = "token";
-                parameters.display = "popup";
-                parameters.scope = "manage_pages";
-                return (client.GetLoginUrl(parameters));
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
 
         /// <summary>
         /// Gets the News Feeds of the Facebook Page
         /// </summary>
         /// <returns>Returns list of Feeds of type "Picture" from MQ163 page</returns>
-        public IEnumerable<IFacebookPost> GetAllFeeds()
+        public IEnumerable<IFacebookPost> GetAllNewsFeed()
         {
-            var json = new JavaScriptSerializer();
-            List<IFacebookPost> postsList = new List<IFacebookPost>();
-            //string Url = string.Format("{0}/MQ163/feed?filter={2}&access_token={1}", baseUrl, AccessToken, "app_2305272732");
-            string Url = string.Format("{0}/MQ163/posts?method=GET&format=json&access_token={1}", baseUrl, AccessToken);
+            #region Initialize objects and URL
+                var json = new JavaScriptSerializer();
+                List<IFacebookPost> postsList = new List<IFacebookPost>();
+            
+                string Url = string.Format("{0}/MQ163/posts?method=GET&format=json&access_token={1}", _baseUrl, AccessToken);
+            #endregion
 
-            try
+            using (var webClient = new WebClient())
             {
-                using (var webClient = new WebClient())
-                {
-                    string data = webClient.DownloadString(Url);
+                string data = webClient.DownloadString(Url);
+
+                #region parse Facebook feed data
                     var feeds = (Dictionary<string, object>)json.DeserializeObject(data);
                     object[] feedsArray = (object[])feeds.FirstOrDefault(p => p.Key == "data").Value;
                     foreach (object feed in feedsArray)
@@ -110,73 +95,70 @@ namespace MQ163.Application.External
 
 
                         postsList.Add(post);
+
                     }
-                }
-                return postsList;
+                #endregion
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            return postsList;
         }
 
         /// <summary>
-        /// Posts the messages and Picture to the MQ163 Feeds
+        /// Posts on to Facebook Page
         /// </summary>
         /// <param name="postData">Data to be posted</param>
         /// <returns>Returns True: If posted successfully. 
         /// Exception: If post is unsuccessfull</returns>
         public bool AddPost(IFacebookPostData postData)
         {
-            try
-            {
+            #region initialize objects and Url
                 string accessToken = GetPageAccessToken();
-                string albumID = GetAlbumID();
                 postData.AccessToken = accessToken;
 
                 string path = string.Format("{0}/photos?access_token={1}", "MQ163", accessToken);
                 dynamic publishResponse;
-                
-                /*if (null != postData.TaggedUserEmail)
-                    publishResponse = client.PostTaskAsync(path, postData.GetPostObject());
-                else*/
+
                 FacebookClient fb = new FacebookClient();
                 fb.AccessToken = this.AccessToken;
-                publishResponse = fb.PostTaskAsync(path, postData.GetPostObject());
+            #endregion
 
-                while (publishResponse.Status == TaskStatus.WaitingForActivation) ;
-                if (publishResponse.Status == TaskStatus.RanToCompletion)
-                {
-                    string photoId = publishResponse.Result["post_id"];//post_id
-                    if (null != postData.TaggedUserEmail)
-                    {
-                        bool result = TaggingPhoto(photoId, GetUserID(postData.TaggedUserEmail).Id);
-                    }
-                    return true;
-                }
-                else if (publishResponse.Status == TaskStatus.Faulted)
-                {
-                    //CommonEventsHelper.WriteToEventLog(string.Format("Error posting message - {0}", (publishResponse.Exception as Exception).Message), System.Diagnostics.EventLogEntryType.Error);
-                    throw (new InvalidOperationException((((Exception)publishResponse.Exception).InnerException).Message, (Exception)publishResponse.Exception));
-                }
-                return false;
-            }
-            catch (Exception ex)
+            publishResponse = fb.PostTaskAsync(path, postData.GetPostObject());
+
+            // Wait for activation 
+            while (publishResponse.Status == TaskStatus.WaitingForActivation) ;
+
+            // Check if it succeded or failed
+            if (publishResponse.Status == TaskStatus.RanToCompletion)
             {
-                throw ex;
+                string photoId = publishResponse.Result["post_id"];//post_id
+                if (null != postData.TaggedUserEmail)
+                {
+                    bool result = TagPhoto(photoId, GetUserID(postData.TaggedUserEmail).Id);
+                }
+                return true;
             }
+            else if (publishResponse.Status == TaskStatus.Faulted)
+            {
+                //CommonEventsHelper.WriteToEventLog(string.Format("Error posting message - {0}", (publishResponse.Exception as Exception).Message), System.Diagnostics.EventLogEntryType.Error);
+                throw (new InvalidOperationException((((Exception)publishResponse.Exception).InnerException).Message, (Exception)publishResponse.Exception));
+            }
+            return false;
         }
 
-        public bool TaggingPhoto(string photoId, string userId)
+        /// <summary>
+        /// Tags given photo on a post in Facebook
+        /// </summary>
+        /// <param name="photoId">Identifier for the photo</param>
+        /// <param name="userId">User being tagged</param>
+        /// <returns>True if tagging successds</returns>
+        public bool TagPhoto(string photoId, string userId)
         {
             dynamic parameters = new ExpandoObject();
             var json = new JavaScriptSerializer();
             parameters.tags = json.Serialize(new[] { new { tag_uid = userId, x = 1, y = 1 } });
-            //var fb = new FacebookClient();
 
             string path = string.Format("{0}/tags?access_token={1}", photoId, AccessToken);
             dynamic publishResponse;
-            publishResponse = client.GetTaskAsync(path, parameters);
+            publishResponse = _client.GetTaskAsync(path, parameters);
             while (publishResponse.Status == TaskStatus.WaitingForActivation) ;
             if (publishResponse.Status == TaskStatus.RanToCompletion)
             {
@@ -186,140 +168,98 @@ namespace MQ163.Application.External
         }
 
         /// <summary>
-        /// Gets the Album ID for the Album Name specified in the configuration file
-        /// </summary>
-        /// <returns>Returns Facebook Album ID</returns>
-        private string GetAlbumID()
-        {
-            try
-            {
-                string pageName = ConfigurationManager.AppSettings["Facebook:PageName"].ToString();
-                string albumName = ConfigurationManager.AppSettings["Facebook:AlbumName"].ToString();
-                var json = new JavaScriptSerializer();
-                string albumId = null;
-                string oauthUrl1 = string.Format("https://graph.facebook.com/{1}/albums?access_token={0}", AccessToken, pageName);
-
-                using (var webClient = new WebClient())
-                {
-                    string data = webClient.DownloadString(oauthUrl1);
-                    var albums = (Dictionary<string, object>)json.DeserializeObject(data);
-                    object[] albums2 = (object[])albums.FirstOrDefault(p => p.Key == "data").Value;
-                    foreach (object album in albums2)
-                    {
-                        Dictionary<string, object> album2 = (Dictionary<string, object>)album;
-                        if (album2["name"].ToString() == "Test_Album")
-                        {
-                            albumId = album2["id"].ToString();
-                            break;
-                        }
-                    }
-                }
-                return albumId;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        /// <summary>
-        /// Gets the Page access token for the logged in user
+        /// Gets Access token for the logged in user
         /// </summary>
         /// <returns>Returns the Page Access Token needed for posting data</returns>
         private string GetPageAccessToken()
         {
-            try
+            var fb = new FacebookClient();
+            fb.AccessToken = this.AccessToken;
+            // ToDo: Should this be specifid user name/accounts instead of me/accounts?
+            dynamic me = fb.Get("/me/accounts");
+            dynamic pages1 = me.data;
+            string accessToken = null;
+            string pageId1 = null;
+            string pageName = ConfigurationManager.AppSettings["Facebook:PageName"].ToString();
+            foreach (dynamic page in pages1)
             {
-                var fb = new FacebookClient();
-                fb.AccessToken = this.AccessToken;
-                dynamic me = fb.Get("/me/accounts");
-                dynamic pages1 = me.data;
-                string accessToken = null;
-                string pageId1 = null;
-                string pageName = ConfigurationManager.AppSettings["Facebook:PageName"].ToString();
-                foreach (dynamic page in pages1)
+                if (page.name == pageName)
                 {
-                    if (page.name == pageName)
-                    {
-                        pageId1 = page.id;
-                        accessToken = page.access_token;
-                        break;
-                    }
+                    pageId1 = page.id;
+                    accessToken = page.access_token;
+                    break;
                 }
-                return accessToken;
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            return accessToken;
         }
 
         /// <summary>
-        /// Gets all the Comments written by the Facebook users for a post. 
-        /// This also includes the Facebook User Profiles of the Users who commented on the post.
+        /// Gets all the Comments written by the Facebook users on a post. 
         /// </summary>
         /// <param name="postId">Facebook post ID</param>
         /// <returns>Returns the list of comments for the post</returns>
         public IEnumerable<FacebookComment> GetAllCommentsForPost(string postId)
         {
-            try
-            {
-                string Url = string.Format("{0}/{2}/comments?access_token={1}", baseUrl, AccessToken, postId);
+            #region Initialize objects and Url
+                string Url = string.Format("{0}/{2}/comments?access_token={1}", _baseUrl, AccessToken, postId);
                 var json = new JavaScriptSerializer();
                 List<FacebookComment> commentsList = new List<FacebookComment>();
+            #endregion
 
-                using (var webClient = new WebClient())
+            using (var webClient = new WebClient())
+            {
+                string data = webClient.DownloadString(Url);
+
+                #region parse returned data
+                    
+                var comments = (Dictionary<string, object>)json.DeserializeObject(data);
+                object[] commentsArray = (object[])comments.FirstOrDefault(p => p.Key == "data").Value;
+                if (commentsArray.Count() > 0)
                 {
-                    string data = webClient.DownloadString(Url);
-                    var comments = (Dictionary<string, object>)json.DeserializeObject(data);
-                    object[] commentsArray = (object[])comments.FirstOrDefault(p => p.Key == "data").Value;
-                    if (commentsArray.Count() > 0)
+                    foreach (object comment in commentsArray)
                     {
-                        foreach (object comment in commentsArray)
+                        FacebookComment facebookComment = null;
+                        Dictionary<string, object> comment2 = (Dictionary<string, object>)comment;
+                        if (comment2.Keys.Contains("message") && null != comment2["message"])
                         {
-                            FacebookComment facebookComment = null;
-                            Dictionary<string, object> comment2 = (Dictionary<string, object>)comment;
-                            if (comment2.Keys.Contains("message") && null != comment2["message"])
+                            facebookComment = new FacebookComment();
+                            facebookComment.CommentText = comment2["message"].ToString();
+                            facebookComment.Id = comment2["id"].ToString();
+                            facebookComment.CreatedDateAndTime = null != comment2["created_time"] ? Convert.ToDateTime(comment2["created_time"].ToString()) : DateTime.MinValue;
+                            Dictionary<string, object> commentedUser = (Dictionary<string, object>)comment2["from"];
+                            if (commentedUser.Keys.Contains("name") && null != commentedUser["name"])
                             {
-                                facebookComment = new FacebookComment();
-                                facebookComment.CommentText = comment2["message"].ToString();
-                                facebookComment.Id = comment2["id"].ToString();
-                                facebookComment.CreatedDateAndTime = null != comment2["created_time"] ? Convert.ToDateTime(comment2["created_time"].ToString()) : DateTime.MinValue;
-                                Dictionary<string, object> commentedUser = (Dictionary<string, object>)comment2["from"];
-                                if (commentedUser.Keys.Contains("name") && null != commentedUser["name"])
-                                {
-                                    facebookComment.User = GetUserProfile(commentedUser["id"].ToString());
-                                }
-                                facebookComment.IsSupportive = (null != comment2["user_likes"] ? Convert.ToBoolean(comment2["user_likes"].ToString()) : false);
-                                commentsList.Add(facebookComment);
+                                facebookComment.User = GetUserProfile(commentedUser["id"].ToString());
                             }
+                            facebookComment.IsSupportive = (null != comment2["user_likes"] ? Convert.ToBoolean(comment2["user_likes"].ToString()) : false);
+                            commentsList.Add(facebookComment);
                         }
                     }
                 }
-                return commentsList;
+
+                #endregion
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            return commentsList;
         }
 
         /// <summary>
-        /// Gets all the Likes for a post
+        /// Gets all the Likes on a post
         /// </summary>
         /// <param name="postId">Facebook post ID</param>
         /// <returns>Returns list of likes for the post</returns>
         public IEnumerable<IFacebookProfile> GetAllLikesForPost(string postId)
         {
-            try
-            {
-                string Url = string.Format("{0}/{2}/likes?access_token={1}", baseUrl, AccessToken, postId);
+            #region Initialize URL and objects
+                string Url = string.Format("{0}/{2}/likes?access_token={1}", _baseUrl, AccessToken, postId);
                 var json = new JavaScriptSerializer();
                 List<IFacebookProfile> profilesList = new List<IFacebookProfile>();
+            #endregion
 
-                using (var webClient = new WebClient())
-                {
-                    string data = webClient.DownloadString(Url);
+            using (var webClient = new WebClient())
+            {
+                string data = webClient.DownloadString(Url);
+
+                #region Parse data
                     var likes = (Dictionary<string, object>)json.DeserializeObject(data);
                     object[] likesArray = (object[])likes.FirstOrDefault(p => p.Key == "data").Value;
                     if (likesArray.Count() > 0)
@@ -335,13 +275,10 @@ namespace MQ163.Application.External
                             profilesList.Add(profile);
                         }
                     }
-                }
-                return profilesList;
+                #endregion
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            return profilesList;
+            
         }
 
         /// <summary>
@@ -351,32 +288,25 @@ namespace MQ163.Application.External
         /// <returns>Returns the Facebook Profile for the User</returns>
         private IFacebookProfile GetUserProfile(string profileId)
         {
-            try
-            {
-                string Url = string.Format("{0}/{2}?access_token={1}", baseUrl, AccessToken, profileId);
-                var json = new JavaScriptSerializer();
-                IFacebookProfile profile = null;
+            string Url = string.Format("{0}/{2}?access_token={1}", _baseUrl, AccessToken, profileId);
+            var json = new JavaScriptSerializer();
+            IFacebookProfile profile = null;
 
-                using (var webClient = new WebClient())
-                {
-                    string data = webClient.DownloadString(Url);
-                    var userProfile = (Dictionary<string, object>)json.DeserializeObject(data);
-                    if (userProfile.Count() > 0)
-                    {
-                        profile = new FacebookProfile();
-                        profile.Id = (userProfile.ContainsKey("id"))?userProfile["id"].ToString():string.Empty;
-                        profile.FirstName = (userProfile.ContainsKey("first_name"))?userProfile["first_name"].ToString():"- ";
-                        profile.LastName = (userProfile.ContainsKey("last_name"))?userProfile["last_name"].ToString() : "- ";
-                        //profile.ProfilePicture = GetProfilePictureURL(userProfile["id"].ToString());
-                        profile.UserName = (userProfile.ContainsKey("username"))?userProfile["username"].ToString():"- ";
-                    }
-                }
-                return profile;
-            }
-            catch (Exception ex)
+            using (var webClient = new WebClient())
             {
-                throw ex;
+                string data = webClient.DownloadString(Url);
+                var userProfile = (Dictionary<string, object>)json.DeserializeObject(data);
+                if (userProfile.Count() > 0)
+                {
+                    profile = new FacebookProfile();
+                    profile.Id = (userProfile.ContainsKey("id"))?userProfile["id"].ToString():string.Empty;
+                    profile.FirstName = (userProfile.ContainsKey("first_name"))?userProfile["first_name"].ToString():"- ";
+                    profile.LastName = (userProfile.ContainsKey("last_name"))?userProfile["last_name"].ToString() : "- ";
+                    //profile.ProfilePicture = GetProfilePictureURL(userProfile["id"].ToString());
+                    profile.UserName = (userProfile.ContainsKey("username"))?userProfile["username"].ToString():"- ";
+                }
             }
+            return profile;
         }
 
         /// <summary>
@@ -386,33 +316,26 @@ namespace MQ163.Application.External
         /// <returns>Returns the User profile of the User</returns>
         private IFacebookProfile GetUserID(string userEmail)
         {
-            try
-            {
-                string Url = string.Format("{0}/search?q={1}&type=user&access_token={2}", baseUrl, userEmail, AccessToken);
-                var json = new JavaScriptSerializer();
-                IFacebookProfile profile = null;
+            string Url = string.Format("{0}/search?q={1}&type=user&access_token={2}", _baseUrl, userEmail, AccessToken);
+            var json = new JavaScriptSerializer();
+            IFacebookProfile profile = null;
 
-                using (var webClient = new WebClient())
+            using (var webClient = new WebClient())
+            {
+                string data = webClient.DownloadString(Url);
+                var userProfile = (Dictionary<string, object>)json.DeserializeObject(data);
+                if (userProfile.Count() > 0)
                 {
-                    string data = webClient.DownloadString(Url);
-                    var userProfile = (Dictionary<string, object>)json.DeserializeObject(data);
-                    if (userProfile.Count() > 0)
+                    profile = new FacebookProfile();
+                    object[] userProfileArray = (object[])userProfile.FirstOrDefault(p => p.Key == "data").Value;
+                    foreach (object user in userProfileArray)
                     {
-                        profile = new FacebookProfile();
-                        object[] userProfileArray = (object[])userProfile.FirstOrDefault(p => p.Key == "data").Value;
-                        foreach (object user in userProfileArray)
-                        {
-                            Dictionary<string, object> userProfileData = (Dictionary<string, object>)user;
-                            profile = GetUserProfile(userProfileData["id"].ToString());
-                        }
+                        Dictionary<string, object> userProfileData = (Dictionary<string, object>)user;
+                        profile = GetUserProfile(userProfileData["id"].ToString());
                     }
                 }
-                return profile;
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            return profile;
         }
 
         /// <summary>
@@ -422,29 +345,22 @@ namespace MQ163.Application.External
         /// <returns>Returns the Facebook Profile Picture of the user</returns>
         private string GetProfilePictureURL(string profileId)
         {
-            try
-            {
-                string Url = string.Format("{0}/{2}/picture?access_token={1}", baseUrl, AccessToken, profileId);
-                var json = new JavaScriptSerializer();
-                string profilePictureUrl = null;
+            string Url = string.Format("{0}/{2}/picture?access_token={1}", _baseUrl, AccessToken, profileId);
+            var json = new JavaScriptSerializer();
+            string profilePictureUrl = null;
 
-                using (var webClient = new WebClient())
-                {
-                    profilePictureUrl = webClient.DownloadString(Url);
-                }
-                return profilePictureUrl;
-            }
-            catch (Exception ex)
+            using (var webClient = new WebClient())
             {
-                throw ex;
+                profilePictureUrl = webClient.DownloadString(Url);
             }
+            return profilePictureUrl;
         }
 
         #region IDisposable Members
 
         public void Dispose()
         {
-            this.client = null;
+            this._client = null;
         }
 
         #endregion

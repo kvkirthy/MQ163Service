@@ -8,6 +8,10 @@ namespace MQ163Service.Models
 {
     public class DataAccess
     {
+        /// <summary>
+        /// Retreive leads data
+        /// </summary>
+        /// <returns>List of Leads</returns>
         public static List<Prospect> GetLeads()
         {
             var db = new MQ163DataContext();
@@ -18,6 +22,10 @@ namespace MQ163Service.Models
             return prospects.ToList();
         }
 
+        /// <summary>
+        /// Retreive Customer data
+        /// </summary>
+        /// <returns>List of Customers</returns>
         public static List<Prospect> GetCustomers()
         {
             var db = new MQ163DataContext();
@@ -28,12 +36,21 @@ namespace MQ163Service.Models
             return prospects.ToList();
         }
 
+        /// <summary>
+        /// Retreive Offers information
+        /// </summary>
+        /// <returns>List of Offers data</returns>
         public static List<MerchandizeOffer> GetOffers()
         {
             var db = new MQ163DataContext();
             return db.MerchandizeOffers.ToList();
         }
 
+        /// <summary>
+        /// Create lead reord using given information
+        /// </summary>
+        /// <param name="fullName">lead name</param>
+        /// <returns>true if succeded</returns>
         public static bool CreateLead(string fullName)
         {
             var db = new MQ163DataContext();

@@ -41,7 +41,7 @@ namespace MQ163.Application.External
         {
             try
             {
-                if (fbAgent.IsLogged)
+                if (fbAgent.IsLoggedIn)
                 {
                     return fbAgent.AddPost(postObject);
                 }
@@ -61,9 +61,9 @@ namespace MQ163.Application.External
         {
             try
             {
-                if (fbAgent.IsLogged)
+                if (fbAgent.IsLoggedIn)
                 {
-                    return fbAgent.GetAllFeeds();
+                    return fbAgent.GetAllNewsFeed();
                 }
                 return null;
             }
@@ -82,7 +82,7 @@ namespace MQ163.Application.External
         {
             try
             {
-                if (fbAgent.IsLogged)
+                if (fbAgent.IsLoggedIn)
                 {
                     return fbAgent.GetAllCommentsForPost(postID);
                 }
@@ -103,7 +103,7 @@ namespace MQ163.Application.External
         {
             try
             {
-                if (fbAgent.IsLogged)
+                if (fbAgent.IsLoggedIn)
                 {
                     return fbAgent.GetAllLikesForPost(postID);
                 }

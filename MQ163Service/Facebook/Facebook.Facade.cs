@@ -1,57 +1,51 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using MQ163.Application.External;
 using MQ163.External.Facebook;
+
 namespace MQ163.Application.Facade
 {
+    /// <summary>
+    /// Encapsulate complex operations of getting data, parsing, multiple calls (if any)
+    /// For the consumer it's just a single call.
+    /// </summary>
     public class FacebookFacade : IDisposable
     {
         private IFacebookPage page = null;
 
-        //TOBE: Used by the tests only
+        /// <summary>
+        /// Initializes with given Facebook Page object
+        /// </summary>
+        /// <param name="page">Facebook page to be initailized</param>
         public FacebookFacade(IFacebookPage page)
         {
             this.page = page;
         }
 
+        /// <summary>
+        /// Initializes Facebook Facade object. Need to set Facebook page later.
+        /// </summary>
         public FacebookFacade()
         {
             page = new FacebookPage();
         }
+        
 
         /// <summary>
-        /// Activates the FaceBook Page with new Access Token
-        /// </summary>
-        /// <param name="accessToken">New Access Token</param>
-        //private FacebookFacade Activate(string accessToken)
-        //{
-        //    page = new FacebookPage(accessToken);
-        //    return this;
-        //}
-
-        /// <summary>
-        /// Gets information of all the posts of type "picture" of the Page MQ163
+        /// Gets information of all the posts of type "picture" for a given Facebook page.
         /// </summary>
         /// <returns>IEnumerable of all the Posts</returns>
         public IEnumerable<IFacebookPost> GetAllPosts()
         {
-            try
+            if (null == page)
             {
-                if (null == page)
-                {
-                    page = new FacebookPage();
-                }
-                return page.GetAllPosts();
+                page = new FacebookPage();
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            return page.GetAllPosts();
         }
 
         /// <summary>
-        /// Adds the post to the Page MQ163
+        /// Creates a post on Facebook page.
         /// </summary>
         /// <param name="message">Message of the POst</param>
         /// <param name="picUrl">Picture URL</param>
@@ -59,76 +53,39 @@ namespace MQ163.Application.Facade
         /// <returns></returns>
         public bool PostPictureMesssage(string message, string picUrl, string taggedUserEmail)
         {
-            try
-            {
-                if (null == picUrl)
-                    throw new ArgumentNullException("PicUrl", "Cannot post an empty image to Facebook.");
-                IFacebookPostData data = new FacebookPostData();
-                data.Message = message;
-                data.PictureUrl = picUrl;
-                data.TaggedUserEmail = taggedUserEmail;
+            if (null == picUrl)
+                throw new ArgumentNullException("PicUrl", "Cannot post an empty image to Facebook.");
+            IFacebookPostData data = new FacebookPostData();
+            data.Message = message;
+            data.PictureUrl = picUrl;
+            data.TaggedUserEmail = taggedUserEmail;
 
-                return page.AddPost(data);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            return page.AddPost(data);
         }
 
         /// <summary>
-        /// Gets all the comments for the given post ID
+        /// Get comments on a given post.
         /// </summary>
         /// <param name="postID">Post ID</param>
-        /// <returns>Returns List of all the comments for the post</returns>
+        /// <returns>Returns List of all the comments on the post</returns>
         public IEnumerable<FacebookComment> GetAllCommentsForPost(string postID)
-        {
-            try
-            {
-                if (null == postID)
-                    throw new ArgumentNullException("PostID", "Cannot get the comments for null post ID.");
-                return page.GetAllCommentsForPost(postID);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+        { 
+            if (null == postID)
+                throw new ArgumentNullException("PostID", "Cannot get the comments for null post ID.");
+            return page.GetAllCommentsForPost(postID);
         }
 
         /// <summary>
-        /// Gets the Profiles of the users who liked the post
+        /// Get the Profiles of users who liked the post
         /// </summary>
         /// <param name="postID">Post ID</param>
         /// <returns>Returns list of all the likes for the post</returns>
         public IEnumerable<IFacebookProfile> GetAllLikesForPost(string postID)
         {
-            try
-            {
-                if (null == postID)
-                    throw new ArgumentNullException("PostID", "Cannot get like for null post ID.");
-                return page.GetAllLikesForPost(postID);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            if (null == postID)
+                throw new ArgumentNullException("PostID", "Cannot get like for null post ID.");
+            return page.GetAllLikesForPost(postID);
         }
-
-        /// <summary>
-        /// Updates the Facebook Agent to use the new access Token
-        /// </summary>
-        /// <param name="accessToken">New Access Token to be used</param>
-        //public FacebookFacade UpdateAccessToken(string accessToken)
-        //{
-        //    try
-        //    {
-        //        return Activate(accessToken);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
 
         #region IDisposable Members
 
